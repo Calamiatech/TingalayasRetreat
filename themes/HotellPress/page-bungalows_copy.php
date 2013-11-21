@@ -3,6 +3,9 @@
 /* Template Name: Bungalows template Copy */ 
 
 ?>
+<?php require_script(get_bloginfo( 'template_url' ) . "/js/jquery.featureCarousel.min.js"); ?>
+<?php require_script(bloginfo( 'template_url' ) . "/fancybox/jquery.mousewheel-3.0.4.pack.js"); ?>
+<?php require_script(bloginfo( 'template_url' ) . "/fancybox/jquery.fancybox-1.3.4.pack.js"); ?>
 
 <?php get_header( 'custom' ); ?>
 
@@ -19,9 +22,6 @@
 		
 			
 			<h1><?php the_title(); ?></h1>
-			
-			
-			<!-- div class="col-left" -->
 			
 	
 				<?php the_content(); ?>
@@ -55,31 +55,26 @@
 					//<![CDATA[
 					
 					jQuery( document ).ready( function () {
-												   
-						jQuery( '#bungalows-nav a' ).click( function () {
-							var bungalow	= jQuery( this ).parent( 'li' );
-							//jQuery( 'html' ).animate( { scrollTop : 0 }, 'slow' );
+
+						var switchBungalow = function(bungalow){
 							jQuery( '#loading' ).show();
 							jQuery( '#bungalow-ajax' ).fadeOut();
 							jQuery.get( bungalow.find( 'a' ).attr( 'href' ), '&content=1', function ( data ) {
 								jQuery( '#bungalows-nav .active' ).removeClass( 'active' );
 								bungalow.addClass( 'active' );
-								jQuery( '#bungalow-ajax' ).html( data );
-								jQuery( '#bungalow-ajax' ).fadeIn();
+								jQuery( '#bungalow-ajax' ).html( data ).fadeIn();
 								jQuery( '#loading' ).hide();
 							} );
+						}
+												   
+						jQuery( '#bungalows-nav a' ).click( function () {
+							var bungalow = jQuery( this ).parent( 'li' );
+							switchBungalow(bungalow);
 							return false;
 						} );
 						
-						var bungalow	= jQuery( '#bungalows-nav li:first' );
-						jQuery( '#loading' ).show();
-						jQuery( '#bungalow-ajax' ).fadeOut();
-						jQuery.get( bungalow.find( 'a' ).attr( 'href' ), '&content=1', function ( data ) {
-							bungalow.addClass( 'active' );
-							jQuery( '#bungalow-ajax' ).html( data );
-							jQuery( '#bungalow-ajax' ).fadeIn();
-							jQuery( '#loading' ).hide();
-						} );
+						var bungalow = jQuery( '#bungalows-nav li:first' );
+						switchBungalow(bungalow);
 					
 					} );
 					
@@ -88,26 +83,7 @@
 				</script>
 					
 				<?php endif; ?>
-				
-				
-			<!-- </div> .col-left -->
-	
-			
-			<!-- div class="sidebar" -->
-		
-		
-				<?php // require( TEMPLATEPATH . '/modules/book-online.php' ); ?>
-		
-		
-				<!-- div id="call-us" class="box box-center">
-				
-					<p><em>Or call us!</em><br /> <strong>202-439-7929</strong><br /> Lisa and David Rosenstein</p>
 					
-				</div><!-- #call-us .box 
-
-
-			</div>  .sidebar -->
-			
 			
 			<br class="clear-fix" />
 			
