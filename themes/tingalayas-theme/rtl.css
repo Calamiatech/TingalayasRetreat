@@ -1,0 +1,12 @@
+/*
+
+Theme Name: Tingalayas
+
+RTL Basics
+
+*/
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}

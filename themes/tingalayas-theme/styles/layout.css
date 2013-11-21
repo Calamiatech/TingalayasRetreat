@@ -1,0 +1,1111 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+{ margin: 0; padding: 0; font-size: 100%; font: inherit; border: 0; vertical-align: baseline; outline: none; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+blockquote:before, blockquote:after, q:before, q:after 
+{ content: ''; content: none; }
+input, textarea, select 
+{ margin: 0; font: 100% Arial, Helvetica, sans-serif; vertical-align: middle; }
+button 
+{ margin: 0; font: 100% Arial, Helvetica, sans-serif; vertical-align: middle; cursor: pointer; outline: none; }
+blockquote, q 
+{ quotes: none; }
+.hidden-txt {
+	/* hide from IE Mac \*/
+	text-indent: -999em;
+	overflow: hidden;
+	/* end hide */
+}
+ol, ul 		{ list-style: none; }
+table 		{ border-collapse: collapse; border-spacing: 0; }
+strong		{ font-weight: bold; }
+a 			{ text-decoration: none; }
+a:hover 	{ text-decoration: underline; }
+hr 			{ display: none; }
+.clear-fix 	{ clear: both; }
+.png-fix	{}
+.margin-0 	{ margin: 0 !important; }
+.padding-0	{ padding: 0 !important; }
+
+body {
+	background: url(../images/bg.gif);
+    font: 68.75%/140% Verdana, Geneva, sans-serif;
+	color: #555;
+}
+#bg-top { background: url(../images/bg-top.png) repeat-x; }
+
+/*
+
+
+
+
+
+container
+
+*******************************************************************************************************************/
+
+#container {
+	position: relative;
+	width: 966px;
+	margin: 0 auto;
+}
+
+.deco-page {
+	position: absolute;
+	bottom: 33px;
+	right: 3px;
+	background: url(../images/deco-page.png) no-repeat;
+	width: 236px;
+	height: 193px;
+}
+.page-template-page-home-php .deco-page { display: none; } 
+
+.deco-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../images/shadow.png) repeat-x;
+	width: 100%;
+	height: 115px;
+	overflow: hidden;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.page-template-default .deco-shadow,
+.page-template-page-contact-php .deco-shadow,
+.page-template-page-bungalows-php .deco-shadow,
+.page-template-page-virtual-tour-php .deco-shadow,
+.page-template-page-reservations-php .deco-shadow,
+.page-template-page-other-attrations-php .deco-shadow
+.page-template-page-with-slider-php .deco-shadow {
+	top: 3px;
+	background-position: 0 -65px;
+	height: 50px;
+}
+
+.deco-right-shadow,
+.deco-left-shadow {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: url(../images/deco-left-shadow.png) repeat-y;
+	width: 10px;
+	height: 350px;
+	overflow: hidden;
+}
+.deco-right-shadow {
+	left: auto;
+	right: 0;
+	background-image: url(../images/deco-right-shadow.png);
+}
+.deco-top-shadow,
+.deco-bottom-shadow {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: url(../images/deco-bottom-shadow.png) repeat-x;
+	width: 100%;
+	height: 10px;
+	overflow: hidden;
+}
+.deco-top-shadow {
+	top: 0;
+	bottom: auto;
+	background-image: url(../images/deco-top-shadow.png);
+	height: 13px;
+}
+
+
+/*
+
+
+
+
+
+header
+
+*******************************************************************************************************************/
+
+#header {
+	position: relative;
+	height: 165px;
+}
+#header .company-logo {
+	width: 318px;
+	height: 165px;
+	margin: 0 auto;
+}
+#header .company-logo a {
+	display: block;
+	background: url(../images/logo.png) no-repeat;
+	width: 318px;
+	height: 165px;
+}
+
+/*
+
+
+
+
+
+navigation
+
+*******************************************************************************************************************/
+
+#navigation {
+	position: relative;
+	background: url(../images/nav.png) no-repeat;
+	width: 942px;
+	height: 69px;
+	margin: -12px auto 0;
+	text-align: center;
+	z-index: 99;
+}
+#navigation ul { list-style: none; }
+#navigation li { 
+	display: inline-block; 
+	/* hack for IE7 */
+	*display: inline;
+	*zoom: 1;
+	/* end hack for IE7 */
+}
+#navigation a {
+	display: inline-block;
+	padding: 0 10px;
+	font: 14px/69px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: #6c6c6c;
+	text-shadow: 1px 1px #fff;
+	/* hack for IE7 */
+	*display: inline;
+	*zoom: 1;
+	/* end hack for IE7 */
+}
+#navigation a:hover { text-decoration: none; }
+
+/*
+
+
+
+
+
+banner
+
+*******************************************************************************************************************/
+
+#banner {
+	position: relative;
+	background: url(../images/bg-banner.png) no-repeat;
+	width: 954px;
+	height: 460px;
+	margin: -36px auto 0;
+	padding: 5px 6px 0;
+}
+#banner #main-pic {
+	position: relative;
+	width: 954px;
+	height: 355px;
+}
+#banner #main-pic .pic-wrapper {
+	position: relative;
+	width: 954px;
+	height: 355px;
+	overflow: hidden;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+#banner #main-pic .pic-caption {
+	position: absolute;
+	bottom: -90px;
+	left: 0;
+	width: 310px;
+	height: 75px;
+	padding: 15px 30px 0 37px;
+	font: italic 12px/16px Verdana, Geneva, sans-serif;
+	color: #4a4444;
+	overflow: hidden;
+}
+#banner #slider {
+	position: absolute;
+	bottom: 10px;
+	right: 0;
+	width: 580px;
+	height: 110px;
+	z-index: 9;
+}
+#banner #slider .slides_container {
+	display: inline;
+	float: right;
+	width: 355px;
+	height: 74px;
+	margin: 0 105px 0 0;
+	padding: 32px 0 0;
+}
+#banner #slider .slide {
+	width: 355px;
+	height: 74px;
+	margin: 0 auto;
+}
+#banner #slider .pic {
+	display: inline;
+	float: left;
+	position: relative;
+	width: 57px;
+	height: 57px;
+	margin: 0 6px;
+	border: 1px solid #d4d4d4;
+	box-shadow: 1px 1px 1px #fff;
+}
+#banner #slider .pic:hover { text-decoration: none; }
+#banner #slider .pic .image {
+	display: block;
+	width: 57px;
+	height: 57px;
+	overflow: hidden;
+}
+#banner #slider .pic .deco {
+	display: none;
+	position: absolute;
+	top: -27px;
+	left: 0;
+	background: url(../images/arrow-up.png) 50% 0 no-repeat;
+	width: 57px;
+	height: 11px;
+	z-index: 5;
+}
+#banner #slider .pic-active .deco { display: block; }
+#banner #slider .prev,
+#banner #slider .next {
+	position: absolute;
+	top: 13px;
+	right: 80px;
+}
+#banner #slider .prev { right: 465px; }
+#banner #banner-loading {
+	display: none;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	background: #fff url(../images/loading.gif) 50% 50% no-repeat;
+	width: 958px;
+	height: 449px;
+	/* hide from IE Mac \*/
+	text-indent: -999em;
+	overflow: hidden;
+	/* end hide */
+	z-index: 9;
+	opacity: 0.5;
+}
+
+/*
+
+
+
+
+
+content
+
+*******************************************************************************************************************/
+
+#content {
+	position: relative;
+	background: url(../images/bg-content.png) 50% 0 no-repeat;
+	height: 1%;
+	padding: 0 3px;
+}
+.page-template-default #content,
+.page-template-page-contact-php #content,
+.page-template-page-bungalows-php #content,
+.page-template-page-virtual-tour-php #content,
+.page-template-page-reservations-php #content,
+.page-template-page-other-attrations-php #content,
+.page-template-page-with-slider-php #content { margin-top: -36px; }
+
+
+/* #main-content */
+
+#main-content {
+	display: inline;
+	position: relative;
+	float: left;
+	width: 675px;
+	padding: 3px 0 0;
+	border-right: 1px solid #e5e5e5;
+}
+.page-template-default #main-content,
+.page-template-page-contact-php #main-content,
+.page-template-page-bungalows-php #main-content,
+.page-template-page-virtual-tour-php #main-content,
+.page-template-page-reservations-php #main-content,
+.page-template-page-other-attrations-php #main-content,
+.page-template-page-with-slider-php #main-content {
+	display: block;
+	float: none;
+	width: auto;
+	margin: 0 auto;
+	padding: 45px 45px 45px 80px;
+	border-right: none;
+}
+
+
+/* .home-box */
+
+.home-box {
+	display: inline;
+	float: left;
+	width: 346px;
+	height: 230px;
+	text-align: center;
+}
+.home-box h3 {
+	background: url(../images/deco-underline.png) 50% 100% no-repeat;
+	height: 50px;
+	font: 24px/50px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+
+/* #photo-gallery */
+
+#photo-gallery { border-right: 1px solid #e5e5e5; }
+
+
+/* #video-tour */
+
+#video-tour {
+	float: right;
+	width: 328px;
+}
+
+
+/* #default-content */
+
+#default-content {
+	background: url(../images/deco-default-content.png) 50% 100% no-repeat;
+	padding: 10px 35px 0;
+	height: 225px;
+	text-align: justify;
+}
+
+#default-content h2 {
+	background: url(../images/deco-underline.png) 50% 100% no-repeat;
+	height: 50px;
+	margin: 0 0 10px;
+	font: 24px/50px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	text-align: center;
+	text-shadow: 0 1px #c6c6c6;
+}
+
+
+/* .page-content */
+
+.page-content {
+	height: 1%;
+	clear: both; 
+}
+.page-content .col-left {
+	display: inline;
+	float: left;
+	width: 470px;
+}
+.page-content .col-left-w535 { width: 535px; }
+.page-content .col-right {
+	display: inline;
+	float: right;
+	width: 430px;
+	margin: 0 20px 0 0;
+}
+.page-content-deco {
+	background: url(../images/bg-page-content.png) 50% 100% no-repeat;
+	margin: 0 0 15px;
+	padding: 0 0 8px;
+}
+.box-for-deco {
+	background: url(../images/deco-line.png) 50% 100% no-repeat;
+	margin: 0 0 15px;
+	padding: 0 0 8px;
+}
+
+
+/* .default-styles */
+
+.default-styles h1 {
+	margin: 0 0 20px;
+	font: 24px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	text-shadow: 0 1px #c6c6c6;
+}
+.default-styles h2 {
+	margin: 0 0 20px;
+	font: 23px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	text-shadow: 0 1px #c6c6c6;
+}
+.default-styles h3 {
+	font: 12px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	margin: 0 0 10px;
+}
+.default-styles h4 {
+	margin: 0;
+	font-weight: normal;
+}
+.default-styles p { margin: 0 0 15px; }
+.default-styles ul {
+	margin: 0 0 15px 15px;
+	list-style: disc;
+}
+.default-styles ol {
+	margin: 0 0 15px 20px;
+	list-style: decimal;
+}
+.default-styles img {
+	display: block;
+	background: #fff;
+	margin: 0 auto;
+	padding: 10px;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 10px #ccc;
+}
+.default-styles img.no-deco,
+ .default-styles .sidebar img {
+	display: inline;
+	background: none;
+	margin: auto;
+	padding: 0;
+	border: none;
+	box-shadow: none;
+}
+.default-styles .alignleft,
+.default-styles img.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 25px;
+	margin-top: 4px;
+}
+.default-styles .alignright,
+.default-styles img.alignright {
+	display: inline;
+	float: right;
+	margin-left: 25px;
+	margin-top: 4px;
+}
+.default-styles .aligncenter,
+.default-styles img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+.default-styles img.alignleft,
+.default-styles img.alignright,
+.default-styles img.aligncenter { margin-bottom: 12px; }
+.default-styles .col {
+	display: inline;
+	float: left;
+	width: 45%;
+	margin: 0 4.9% 15px 0;
+}
+.default-styles ul.col {
+	margin-left: 15px;
+	margin-right: 0;
+	list-style-position: outside; 
+}
+.default-styles ul.col-r { float: right; }
+.default-styles .table-box {
+	background: #fff;
+	margin: 0 0 15px;
+	padding: 35px 30px 20px 35px;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 10px #ccc;
+}
+.default-styles .table-box table {
+	width: 100%;
+	border: none;
+	border-collapse: collapse;
+}
+.default-styles .table-box th {
+	padding: 0 0 10px;
+	text-align: left;
+}
+.default-styles .table-box td { padding: 1px 0; }
+.default-styles .table-box .total td { padding: 10px 0 0; }
+
+
+/* .box-palatino */
+
+.box-palatino { font: 11px "Palatino Linotype", "Book Antiqua", Palatino, serif; }
+.box-palatino h2 { margin: 0 0 10px; }
+.box-palatino h3 {
+	margin: 0;
+	font-weight: bold;
+}
+
+.attractions-list { margin: 0 0 15px; }
+.attractions-list ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.attractions-list ul li {
+	display: inline;
+	float: left;
+	position: relative;
+	width: 182px;
+	height: auto !important;
+	height: 75px;
+	min-height: 75px;
+	margin: 0;
+	padding: 0 15px 0 70px;
+	overflow: hidden;
+}
+.attractions-list ul strong { display: block; }
+.attractions-list ul img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0;
+}
+.attractions-list a { color: #555; }
+.attractions-list a:hover { text-decoration: none; }
+
+
+/* .default-form */
+
+.default-form {}
+.default-form label {
+	display: block;
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #2b2623;
+}
+.default-form .field-text {
+	display: block;
+	background: url(../images/bg-text-177.png) no-repeat;
+	width: 177px;
+	height: 20px;
+}
+.default-form .field-text input {
+	background: none;
+	width: 167px;
+	height: 20px;
+	padding: 0 5px;
+	border: none;
+	line-height: 20px;
+}
+.default-form .field-textarea {
+	display: block;
+	background: url(../images/bg-textarea-377.png) no-repeat;
+	width: 377px;
+	height: 102px;
+}
+.default-form .field-textarea textarea {
+	background: url(../images/bg-textarea-377.png) no-repeat;
+	width: 373px;
+	height: 98px;
+	padding: 2px;
+	border: none;
+	resize: none;
+}
+.default-form .button {}
+.default-form button {}
+
+
+/* .post-comment */
+
+.post-comment {
+	position: relative;
+	background: url(../images/bg-form.png) repeat-x;
+	width: 402px;
+	height: 272px;
+	margin: 19px 0 40px;
+	padding: 38px 30px 0;
+	overflow: hidden;
+}
+.post-comment p {
+	margin: 0;
+	padding: 0 0 8px; 
+	clear: both; 
+}
+.post-comment .half {
+	display: inline;
+	float: left;
+	width: 49.9%;
+	clear: none;
+}
+.post-comment .default-form .button {
+	margin: 0;
+	padding: 12px 0 20px;
+	overflow: hidden;
+}
+.post-comment .default-form button {
+	display: block;
+	background: url(../images/button-post-comment.png) no-repeat;
+	width: 122px;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+.post-comment .formloader { display: none; }
+.post-comment .formresult {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 290px;
+	padding: 10px;
+}
+.post-comment .formsuccess { color: green; }
+.post-comment .formerror { color: red; }
+
+
+/* #page-slider */
+
+#page-slider {
+	display: inline;
+	float: left;
+	background: #fff;
+	width: 345px;
+	margin: 0 25px 12px 0;
+	padding: 10px;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 10px #ccc;
+}
+#page-slider .slide {
+	position: relative;
+	width: 345px;
+	height: 365px;
+	overflow: hidden;
+}
+#page-slider .slide .image {
+	position: absolute;
+	top: 0;
+	left: -100px;
+	width: 545px;
+	height: 365px;
+}
+#page-slider img {
+	display: block;
+	background: none;
+	min-width: 345px;
+	height: 365px;
+	margin: 0 auto;
+	padding: 0;
+	border: none;
+	box-shadow: none;
+}
+
+
+/* #social */
+
+#social {
+	background: url(../images/bg-social.png) repeat-x;
+	height: 64px;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	clear: both;
+	overflow: hidden;
+}
+.page-template-default #social,
+.page-template-page-contact-php #social,
+.page-template-page-bungalows-php #social,
+.page-template-page-virtual-tour-php #social,
+.page-template-page-reservations-php #social,
+.page-template-page-other-attrations-php #social,
+.page-template-page-with-slider-php #social { border-top: none; }
+#social h3 {
+	display: inline;
+	float: left;
+	padding: 0 75px;
+	font: 24px/64px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: #373737;
+}
+.page-template-default #social h3,
+.page-template-page-contact-php #social h3,
+.page-template-page-bungalows-php #social h3,
+.page-template-page-virtual-tour-php #social h3,
+.page-template-page-reservations-php #social h3,
+.page-template-page-other-attrations-php #social h3,
+.page-template-page-with-slider-php #social h3 {
+	padding: 0 95px 0 80px;
+	font-size: 20px;
+}
+
+
+/* .video-tour */
+
+.video-tour {
+	display: inline;
+	float: left;
+	background: #fff;
+	width: 340px;
+	margin: 0 20px 0 0;
+	padding: 10px;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 10px #ccc;
+	overflow: hidden;
+}
+
+
+/* image-gallery */
+
+#image-gallery { padding: 50px 0 0; }
+#image-gallery #slider {
+	position: relative;
+	background: url(../images/bg-image-gallery.png) repeat-x;
+	height: 57px;
+	padding: 7px 0 6px;
+}
+#image-gallery .slides_container { 
+	width: 835px;
+	height: 57px;
+}
+#image-gallery .slide {
+	width: 835px;
+	height: 57px;
+	text-align: center; 
+}
+#image-gallery .slide .pic {
+	display: inline-block;
+	width: 57px;
+	height: 57px;
+	margin: 0 4px;
+	overflow: hidden;
+	/* hack for IE7 */
+	*display: inline;
+	*zoom: 1;
+	/* end hack for IE7 */
+}
+#image-gallery img {
+	display: inline;
+	background: none;
+	margin: 0;
+	padding: 0;
+	box-shadow: none;
+}
+#image-gallery .prev,
+#image-gallery .next {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 9;
+}
+#image-gallery .prev { 
+	left: 0;
+	right: auto;
+}
+#image-gallery .prev img,
+#image-gallery .next img {
+	margin: 0;
+	border: none; 
+}
+
+
+/* #bungalows-wrapper */
+
+#bungalows-wrapper {}
+
+#bungalows-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+#bungalows-nav li {
+	display: block;
+	background: none;
+	margin: 0;
+	padding: 0 0 5px;
+}
+#bungalows-nav a {
+	display: block;
+	padding: 0 0 0 13px;
+	color: #555;	
+}
+#bungalows-nav a:hover,
+#bungalows-nav .active a { 
+	background: url(../images/arrow.png) 0 50% no-repeat;
+	text-decoration: none;
+}
+
+#bungalows-wrapper .bungalows-gallery,
+#bungalows-wrapper .carousel-container {
+	position: relative;
+	width: 535px;
+	height: 400px;
+	margin: 0 auto;
+}
+#bungalows-wrapper .bungalows-images-links { 
+	display: none;
+	position: relative;
+	height: 1%;
+	padding: 30px 0;
+}
+#bungalows-wrapper .bungalows-images-links img {
+	display: inline-block;
+	background: none;
+	margin: 0;
+	padding: 0;
+	text-shadow: none;
+	/* hack for IE7 */
+	*display: inline;
+	*zoom: 1;
+	/* end hack for IE7 */
+}
+#bungalows-wrapper .bungalows-gallery img {
+	display: inline;
+	background: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-shadow: 0 0 10px #000;
+}
+
+#bungalows-wrapper .bungalows-gallery .carousel-feature {
+	position: absolute;
+	top: -1000px;
+	left: -1000px;
+	cursor: pointer;
+}
+
+#bungalows-wrapper .bungalows-details {
+	position: relative;
+	padding: 30px 0 0;
+}
+#bungalows-wrapper .bungalows-details h2 {
+	margin: 0 0 15px;
+	font: bold 13px Verdana, Geneva, sans-serif;
+	text-shadow: none;
+}
+
+#bungalows-wrapper .bungalow-content {
+	position: relative;
+	width: 100%;
+	min-height: 400px;
+}
+#bungalows-wrapper #loading {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../images/loading.gif) 50% 50% no-repeat;
+	width: 100%;
+	height: 400px;
+	/* hide from IE Mac \*/
+	text-indent: -999em;
+	overflow: hidden;
+	/* end hide */
+}
+
+
+/* .sidebar */
+
+.sidebar {
+	display: inline;
+	float: right;
+	background: #f8f8f8;
+	width: 284px;
+}
+.page-template-default .sidebar,
+.page-template-page-reservations-php .sidebar,
+.page-template-page-other-attrations-php .sidebar { background: none; }
+
+
+/* #book-online */
+
+#book-online {
+	background: url(../images/bg-book-online.png) no-repeat;
+	height: auto !important;
+	height: 298px;
+	min-height: 298px;
+}
+.page-template-default #book-online,
+.page-template-page-reservations-php #book-online,
+.page-template-page-other-attrations-php #book-online { margin: 0 0 3px; }
+#book-online h3 {
+	height: 47px;
+	margin: 0 0 5px;
+	font: 24px/47px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: #616060;
+	text-align: center;
+	text-shadow: 0 1px #fff;
+}
+#book-online p { 
+	height: 35px;
+	margin: 0;
+	padding: 0 24px;
+	overflow: hidden;
+}
+#book-online label { display: none; }
+#book-online .field-select {
+	display: block;
+	float: left;
+	background: url(../images/bg-select.gif) no-repeat;
+	width: 164px;
+	height: 37px;
+	padding: 3px 5px 0;
+}
+#book-online .field-select select {
+	background: none;
+	width: 164px;
+	padding: 0;
+	font: italic 14px Georgia, "Times New Roman", Times, serif;
+	color: #525252;
+	border: none;
+}
+#book-online a {
+	display: inline;
+	float: right;
+	background: url(../images/button-view.png) no-repeat;
+	width: 51px;
+	height: 26px;
+	/* hide from IE Mac \*/
+	text-indent: -999em;
+	overflow: hidden;
+	/* end hide */
+}
+#book-online .button {
+	height: 57px;
+	padding: 14px 0 0;
+	border-bottom: 1px solid #b5b5b5;
+}
+#book-online button {
+	display: block;
+	background: url(../images/button-submit.png) no-repeat;
+	width: 143px;
+	height: 37px;
+	margin: 0 auto;
+	padding: 0;
+	border: none;
+}
+
+
+/* #testimonials */
+
+#testimonials { height: 235px; }
+#testimonials h3 {
+	background: url(../images/deco-double-line.png) 0 100% no-repeat;
+	height: 43px;
+	margin: 0 0 12px;
+	font: 22px/41px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: #616060;
+	text-align: center;
+	text-shadow: 0 1px #fff;
+}
+#testimonials .testimony {
+	background: url(../images/bg-testimony.png) 50% 0 no-repeat;
+	padding: 5px 15px 0 15px;
+	font-style: italic;
+}
+#testimonials .author { text-align: right; }
+#testimonials .read-next { padding: 11px 0; }
+#testimonials .read-next a {
+	display: block;
+	background: url(../images/button-read-next.png) no-repeat;
+	width: 142px;
+	height: 37px;
+	margin: 0 auto;
+	/* hide from IE Mac \*/
+	text-indent: -999em;
+	overflow: hidden;
+	/* end hide */
+}
+#testimonials .read-reviews {}
+#testimonials .read-reviews span {
+	display: inline;
+	float: left;
+	height: 34px;
+	padding: 0 20px 0 25px;
+	line-height: 34px;
+}
+
+
+/* .box */
+
+.sidebar .box {
+	background: #f8f8f8;
+	margin: 0 0 15px;
+	padding: 25px 5px 10px;
+	border: 1px solid #c2c2c2;
+}
+.sidebar .box-center { text-align: center; }
+
+.sidebar #call-us { padding: 3px 5px; }
+.sidebar #call-us p {
+	margin: 0;
+	padding: 14px 0;
+	border: 1px solid #dedede;
+}
+.sidebar #call-us em { font: 20px "Palatino Linotype", "Book Antiqua", Palatino, serif; }
+.sidebar #call-us strong { font: 26px "Palatino Linotype", "Book Antiqua", Palatino, serif; }
+
+.sidebar #testimony {
+	margin: 10px 0 0;
+	padding: 15px 14px 12px; 
+}
+.sidebar #testimony .testimony {
+	padding: 15px 0 0;
+	border-top: 1px solid #dedede; 
+}
+.sidebar #testimony h3 {
+	margin: 0 0 15px;
+	font: 22px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: #616060;
+	text-align: center;
+	text-shadow: 0 1px #fff;
+}
+.sidebar #testimony p { 
+	font-style: italic;
+	color: #5b5856;
+	line-height: 150%;
+}
+.sidebar #testimony .author {
+	padding-right: 15px;
+	text-align: right; 
+}
+.sidebar #testimony .read-next { margin: 0; }
+.sidebar #testimony .read-next a {
+	display: block;
+	background: url(../images/button-read-next.png) no-repeat;
+	width: 142px;
+	height: 37px;
+	margin: 0 auto;
+	/* hide from IE Mac \*/
+	text-indent: -999em;
+	overflow: hidden;
+	/* end hide */
+}
+
+/*
+
+
+
+
+
+footer
+
+*******************************************************************************************************************/
+
+#footer {
+	position: relative;
+	background: url(../images/bg-footer.png) no-repeat;
+	height: 82px;
+	padding-left: 75px;
+	text-align: left;
+}
+.page-template-page-home-php #footer { 
+	padding-left: 0;
+	text-align: center;
+}
+#footer ul { list-style: none; }
+#footer li { 
+	display: inline-block; 
+	/* hack for IE7 */
+	*display: inline;
+	*zoom: 1;
+	/* end hack for IE7 */
+}
+#footer a {
+	display: inline-block;
+	padding: 0 8px;
+	font: 12px/50px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: #6c6c6c;
+	/* hack for IE7 */
+	*display: inline;
+	*zoom: 1;
+	/* end hack for IE7 */
+}

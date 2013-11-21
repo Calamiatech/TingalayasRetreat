@@ -1,0 +1,12 @@
+[10-Mar-2013 21:24:26] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 12 for query 	SELECT r.ID  
+			FROM wp_rooms r 
+			WHERE r.room_type_ID=188 
+				AND r.status='publish'
+				AND r.ID NOT IN 
+				( 
+					SELECT DISTINCT b.room_ID FROM wp_bookings b 
+					WHERE b.check_in < 1373673600 AND b.check_out > 1373068800
+					AND b.status='publish' 
+				)
+			ORDER BY r.room_name
+			LIMIT 0,  made by W3_Db->query, W3_DbCache->query, W3_DbCallUnderlying->query, W3_Db->query, W3_DbProcessor->query, W3_Db->default_query

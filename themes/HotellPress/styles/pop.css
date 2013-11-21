@@ -1,0 +1,183 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+{ margin: 0; padding: 0; font-size: 100%; font: inherit; border: 0; vertical-align: baseline; outline: none; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+blockquote:before, blockquote:after, q:before, q:after 
+{ content: ''; content: none; }
+input, textarea, select 
+{ margin: 0; font: 100% Arial, Helvetica, sans-serif; vertical-align: middle; }
+button 
+{ margin: 0; font: 100% Arial, Helvetica, sans-serif; vertical-align: middle; cursor: pointer; outline: none; }
+blockquote, q 
+{ quotes: none; }
+.hidden-txt {
+	/* hide from IE Mac \*/
+	text-indent: -999em;
+	overflow: hidden;
+	/* end hide */
+}
+ol, ul 		{ list-style: none; }
+table 		{ border-collapse: collapse; border-spacing: 0; }
+strong		{ font-weight: bold; }
+a 			{ text-decoration: none; }
+a:hover 	{ text-decoration: underline; }
+hr 			{ display: none; }
+.clear-fix 	{ clear: both; }
+.png-fix	{}
+.margin-0 	{ margin: 0 !important; }
+.padding-0	{ padding: 0 !important; }
+
+body {
+	background: url(../images/custom/bg.gif);
+    font: 68.75%/140% Verdana, Geneva, sans-serif;
+	color: #555;
+}
+
+/* .default-styles */
+
+.default-styles h1 {
+	margin: 0 0 20px;
+	font: 24px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	text-shadow: 0 1px #c6c6c6;
+}
+.default-styles h2 {
+	margin: 0 0 20px;
+	font: 23px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	text-shadow: 0 1px #c6c6c6;
+}
+.default-styles h3 {
+	font: 12px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	margin: 0 0 10px;
+}
+.default-styles h4 {
+	margin: 0;
+	font-weight: normal;
+}
+.default-styles p { margin: 0 0 15px; }
+.default-styles ul {
+	margin: 0 0 15px 15px;
+	list-style: disc;
+}
+.default-styles ol {
+	margin: 0 0 15px 20px;
+	list-style: decimal;
+}
+.default-styles img {
+	display: block;
+	background: #fff;
+	margin: 0 auto;
+	padding: 10px;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 10px #ccc;
+}
+.default-styles img.no-deco,
+ .default-styles .sidebar img {
+	display: inline;
+	background: none;
+	margin: auto;
+	padding: 0;
+	border: none;
+	box-shadow: none;
+}
+.default-styles .alignleft,
+.default-styles img.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 25px;
+	margin-top: 4px;
+}
+.default-styles .alignright,
+.default-styles img.alignright {
+	display: inline;
+	float: right;
+	margin-left: 25px;
+	margin-top: 4px;
+}
+.default-styles .aligncenter,
+.default-styles img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+.default-styles img.alignleft,
+.default-styles img.alignright,
+.default-styles img.aligncenter { margin-bottom: 12px; }
+.default-styles .col {
+	display: inline;
+	float: left;
+	width: 45%;
+	margin: 0 4.9% 15px 0;
+}
+.default-styles ul.col {
+	margin-left: 15px;
+	margin-right: 0;
+	list-style-position: outside; 
+}
+.default-styles ul.col-r { float: right; }
+.default-styles .table-box {
+	background: #fff;
+	margin: 0 0 15px;
+	padding: 35px 30px 20px 35px;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 10px #ccc;
+}
+.default-styles .table-box table {
+	width: 100%;
+	border: none;
+	border-collapse: collapse;
+}
+.default-styles .table-box th {
+	padding: 0 0 10px;
+	text-align: left;
+}
+.default-styles .table-box td { padding: 1px 0; }
+.default-styles .table-box .total td { padding: 10px 0 0; }
+
+
+#pop-wrapper {
+	width: 535px;
+	margin: 0 auto;
+	padding: 15px 0 0;
+}
+
+#pop-wrapper .bungalows-gallery,
+#pop-wrapper .carousel-container {
+	position: relative;
+	width: 535px;
+	height: 400px;
+	margin: 0 auto;
+}
+#pop-wrapper .bungalows-images-links { 
+	display: none;
+	position: relative;
+	height: 1%;
+	padding: 30px 0;
+}
+#pop-wrapper .bungalows-images-links img {
+	display: inline-block;
+	background: none;
+	margin: 0;
+	padding: 0;
+	text-shadow: none;
+	/* hack for IE7 */
+	*display: inline;
+	*zoom: 1;
+	/* end hack for IE7 */
+}
+#pop-wrapper .bungalows-gallery img {
+	display: inline;
+	background: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-shadow: 0 0 10px #000;
+}
+
+#pop-wrapper .bungalows-gallery .carousel-feature {
+	position: absolute;
+	top: -1000px;
+	left: -1000px;
+	cursor: pointer;
+}

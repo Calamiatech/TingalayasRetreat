@@ -1,0 +1,22 @@
+#navigation ul { margin: 0 0 0 120px; }
+#navigation li { 
+	display: inline;
+	float: left;
+}
+
+#book-online .field-select {
+	width: 172px;
+	height: 39px;
+	padding: 1px 1px 0;
+}
+#book-online .field-select select {
+	width: 172px;
+}
+
+#bungalows-wrapper .bungalows-gallery { display: none; }
+
+#footer ul { margin: 0 0 0 150px; }
+#footer li { 
+	display: inline;
+	float: left;
+}
