@@ -4,6 +4,8 @@
 
 ?>
 
+<?php require_script("http://www2.webervations.com/calendars/14892_setup.js"); ?>
+
 <?php get_header( 'custom' ); ?>
 
 <?php if ( have_posts() ) : the_post(); ?>
@@ -22,7 +24,8 @@
 			
 			
 			<div class="col-left">
-			
+				
+				<script type="text/javascript" src="http://www2.webervations.com/calendars/14892_calendar.js"></script>
 	
 				<div class="table-box">
 				

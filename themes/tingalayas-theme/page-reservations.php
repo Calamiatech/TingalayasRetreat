@@ -1,6 +1,6 @@
 <?php /* Template Name: Reservations template */ ?>
 
-<?php require_script("http://www2.webervations.com/calendars/14892_setup.js");
+<?php require_script("http://www2.webervations.com/calendars/14892_setup.js"); ?>
 
 <?php get_header(); ?>
 
