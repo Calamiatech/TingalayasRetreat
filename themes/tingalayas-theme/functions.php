@@ -70,4 +70,24 @@ require( 'functions/meta-tags.php' );
 
 require( 'functions/social-networks.php' );
 
+$inject_required_scripts = array();
+
+/**
+ * Call this function before calling get_header() to request custom js code to be injected on head.
+ *
+ * @param code the javascript code to be injected.
+ */
+function require_script($code) {
+  global $inject_required_scripts;
+  $inject_required_scripts[] = $code; // store code snippet for later injection
+}
+
+function inject_required_scripts() {
+  global $inject_required_scripts;
+  foreach($inject_required_scripts as $script)
+    // inject all code snippets, if any
+    echo '<script type="text/javascript">'.$script.'</script>';
+}
+add_action('wp_head', 'inject_required_scripts');
+
 ?>
