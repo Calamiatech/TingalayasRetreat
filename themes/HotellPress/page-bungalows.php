@@ -3,9 +3,6 @@
 /* Template Name: Bungalows template */ 
 
 ?>
-<?php require_script(get_bloginfo( 'template_url' ) . "/js/jquery.featureCarousel.min.js"); ?>
-<?php require_script(bloginfo( 'template_url' ) . "/fancybox/jquery.mousewheel-3.0.4.pack.js"); ?>
-<?php require_script(bloginfo( 'template_url' ) . "/fancybox/jquery.fancybox-1.3.4.pack.js"); ?>
 
 <?php get_header( 'custom' ); ?>
 
