@@ -86,7 +86,7 @@ function inject_required_scripts() {
   global $inject_required_scripts;
   foreach($inject_required_scripts as $script)
     // inject all code snippets, if any
-    echo '<script type="text/javascript">'.$script.'</script>';
+    echo '<script type="text/javascript" src="'.$script.'"></script>';
 }
 add_action('wp_head', 'inject_required_scripts');
 
