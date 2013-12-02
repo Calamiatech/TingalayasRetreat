@@ -8,6 +8,8 @@
 
 <?php if ( have_posts() ) : the_post(); ?>
 
+<?php gravity_form_enqueue_scripts(2, true); ?>
+
 
 <div id="content">
 
