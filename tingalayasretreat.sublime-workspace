@@ -34,7 +34,7 @@
 			"file": "themes/HotellPress/page-reservations.php",
 			"settings":
 			{
-				"buffer_size": 4288,
+				"buffer_size": 4176,
 				"line_ending": "Windows"
 			}
 		},
@@ -51,6 +51,14 @@
 			"settings":
 			{
 				"buffer_size": 3904,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "themes/HotellPress/modules/book-online.php",
+			"settings":
+			{
+				"buffer_size": 4026,
 				"line_ending": "Windows"
 			}
 		}
@@ -188,7 +196,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -250,15 +258,15 @@
 					"file": "themes/HotellPress/page-reservations.php",
 					"settings":
 					{
-						"buffer_size": 4288,
+						"buffer_size": 4176,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								138,
-								57
+								1716,
+								1716
 							]
 						],
 						"settings":
@@ -267,7 +275,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1080.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -322,6 +330,33 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "themes/HotellPress/modules/book-online.php",
+					"settings":
+					{
+						"buffer_size": 4026,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								764,
+								764
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

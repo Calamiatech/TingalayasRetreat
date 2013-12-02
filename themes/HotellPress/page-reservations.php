@@ -3,9 +3,7 @@
 /* Template Name: Reservations template */ 
 
 ?>
-
-<?php require_script("http://www2.webervations.com/calendars/14892_setup.js"); ?>
-
+ 
 <?php get_header( 'custom' ); ?>
 
 <?php if ( have_posts() ) : the_post(); ?>
@@ -62,6 +60,8 @@
 						<?php endforeach; ?>
 					
 					</table>
+					<?php gravity_form(2, false, false, false, '', true); ?>
+
 				
 				</div><!-- .table-box -->
 				
