@@ -65,8 +65,7 @@
 				
 				</div><!-- .table-box -->
 				
-					<script type="text/javascript" src="http://www2.webervations.com/calendars/14892_calendar.js"></script>
-								<script type="text/javascript" src="<?php echo bloginfo( 'template_url' ); ?>/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+					<script type="text/javascript" src="<?php echo bloginfo( 'template_url' ); ?>/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
 					
 					<script type="text/javascript" src="<?php echo bloginfo( 'template_url' ); ?>/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 
