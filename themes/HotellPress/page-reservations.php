@@ -52,10 +52,10 @@
 				
 						<tr<?php echo ( $count == $total ? ' class="total"' : '' ); ?>>
 
-							<?php if (get( 'res_link', $rate ) !== "") : ?>
 							<td class="col-book">
 								<input name="input_15.<?php echo $count ?>" type="checkbox" value="<?php echo get( 'rates_bungalow', $rate ); ?>" id="choice_15_<?php echo $count ?>" tabindex="<?php echo $count ?>">
 							</td>
+							<?php if (get( 'res_link', $rate ) !== "") : ?>
 							<td class="col-rates">
 								<a href="<?php echo get( 'res_link', $rate ); ?>&reservation=1" target="_blank" class="iframe details-button simplelink">
 									<?php echo get( 'rates_bungalow', $rate ); ?>
@@ -134,6 +134,7 @@
             <input type="hidden" class="gform_hidden" name="is_submit_2" value="1">
             <input type="hidden" class="gform_hidden" name="gform_submit" value="2">
             <input type="hidden" class="gform_hidden" name="gform_unique_id" value="">
+            <input type="hidden" class="gform_hidden" name="state_2" value="WyJhOjA6e30iLCIyMTNmYTAyNDExODEzZGMxZGU3N2JmOTM5MjY5YzA0YiJd">
             <input type="hidden" class="gform_hidden" name="gform_target_page_number_2" id="gform_target_page_number_2" value="0">
             <input type="hidden" class="gform_hidden" name="gform_source_page_number_2" id="gform_source_page_number_2" value="1">
             <input type="hidden" name="gform_field_values" value="">
