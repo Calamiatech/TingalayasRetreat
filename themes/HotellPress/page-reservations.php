@@ -54,7 +54,7 @@
 
 							<td class="col-book">
 								<input name="input_15.<?php echo $count ?>" type="checkbox" value="<?php echo get( 'rates_bungalow', $rate ); ?>" id="choice_15_<?php echo $count ?>" tabindex="<?php echo $count ?>">
-							</td>
+							</td> 
 							<?php if (get( 'res_link', $rate ) !== "") : ?>
 							<td class="col-rates">
 								<a href="<?php echo get( 'res_link', $rate ); ?>&reservation=1" target="_blank" class="iframe details-button simplelink">
@@ -77,17 +77,6 @@
 						<a id="gf_2" name="gf_2" class="gform_anchor"></a>
                         <div class="gform_body">
                             <ul id="gform_fields_2" class="gform_fields top_label description_below">
-                            	<li id="field_2_14" class="gfield">
-                            		<label class="gfield_label"></label>
-                            		<div class="ginput_container">
-                            			<ul class="gfield_checkbox" id="input_2_14">
-                            				<li class="gchoice_14_1">
-                            					<input name="input_14.1" type="checkbox" value="I want to book the entire property" id="choice_14_1" tabindex="9">
-                            					<label for="choice_14_1">I want to book the entire property</label>
-                            				</li>
-                            			</ul>
-                            		</div>
-                            	</li>
                             	<li id="field_2_1" class="gfield               gfield_contains_required">
                             		<label class="gfield_label" for="input_2_1">First Night<span class="gfield_required">*</span></label>
                             		<div class="ginput_container">
@@ -105,7 +94,7 @@
                             			<label class="gfield_label" for="input_2_6">Number of Guests</label>
                             			<div class="ginput_container">
                             				<input name="input_6" id="input_2_6" type="number" step="any" value="" class="small" tabindex="12">
-                            				<div class="instruction ">Please enter a value between <strong>1</strong> and <strong>50</strong>.</div>
+                            				<div class="instruction ">Please enter a value between <strong>1</strong> and <strong>19</strong>.</div>
                             			</div>
                             		</li>
                             		<li id="field_2_9" class="gfield">
