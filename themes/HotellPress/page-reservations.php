@@ -27,9 +27,12 @@
 	
 				<div class="table-box">
 				
+						<form method="post" enctype="multipart/form-data" target="gform_ajax_frame_2" id="gform_2" action="/reservations/#gf_2">
 					<table>
 					
 						<tr>
+
+							<th class="col-book">More Info</th> 
 						
 							<th class="col-rates">Rates:</th>
 							
@@ -48,8 +51,16 @@
 						<?php foreach ( $rates as $rate ) : $count ++; ?>
 				
 						<tr<?php echo ( $count == $total ? ' class="total"' : '' ); ?>>
+
 							<?php if (get( 'res_link', $rate ) !== "") : ?>
-							<td class="col-rates"><a href="<?php echo get( 'res_link', $rate ); ?>&reservation=1" target="_blank" class="iframe details-button simplelink"><?php echo get( 'rates_bungalow', $rate ); ?></a></td>
+							<td class="col-book">
+								<input name="input_15.<?php echo $count ?>" type="checkbox" value="<?php echo get( 'rates_bungalow', $rate ); ?>" id="choice_15_<?php echo $count ?>" tabindex="<?php echo $count ?>">
+							</td>
+							<td class="col-rates">
+								<a href="<?php echo get( 'res_link', $rate ); ?>&reservation=1" target="_blank" class="iframe details-button simplelink">
+									<?php echo get( 'rates_bungalow', $rate ); ?>
+								</a>
+							</td>
 							<?php else : ?>
 							<td class="col-rates"><strong><?php echo get( 'rates_bungalow', $rate ); ?></strong></td>
 							<?php endif; ?>
@@ -62,7 +73,74 @@
 						<?php endforeach; ?>
 					
 					</table>
-					<?php gravity_form(2, false, false, false, '', true); ?>
+					<div class="gf_browser_chrome gform_wrapper" id="gform_wrapper_2">
+						<a id="gf_2" name="gf_2" class="gform_anchor"></a>
+                        <div class="gform_body">
+                            <ul id="gform_fields_2" class="gform_fields top_label description_below">
+                            	<li id="field_2_14" class="gfield">
+                            		<label class="gfield_label"></label>
+                            		<div class="ginput_container">
+                            			<ul class="gfield_checkbox" id="input_2_14">
+                            				<li class="gchoice_14_1">
+                            					<input name="input_14.1" type="checkbox" value="I want to book the entire property" id="choice_14_1" tabindex="9">
+                            					<label for="choice_14_1">I want to book the entire property</label>
+                            				</li>
+                            			</ul>
+                            		</div>
+                            	</li>
+                            	<li id="field_2_1" class="gfield               gfield_contains_required">
+                            		<label class="gfield_label" for="input_2_1">First Night<span class="gfield_required">*</span></label>
+                            		<div class="ginput_container">
+                            			<input name="input_1" id="input_2_1" type="text" value="" class="datepicker medium mdy datepicker_with_icon hasDatepicker" tabindex="10"> </div>
+                            			<input type="hidden" id="gforms_calendar_icon_input_2_1" class="gform_hidden" value="http://tingalayasretreat.metagrapher.com/wp-content/plugins/gravityforms/images/calendar.png">
+                            		</li>
+                            		<li id="field_2_2" class="gfield               gfield_contains_required">
+                            			<label class="gfield_label" for="input_2_2">Last Night<span class="gfield_required">*</span></label>
+                            			<div class="ginput_container">
+                            				<input name="input_2" id="input_2_2" type="text" value="" class="datepicker medium mdy datepicker_with_icon hasDatepicker" tabindex="11">
+                            			</div>
+                            			<input type="hidden" id="gforms_calendar_icon_input_2_2" class="gform_hidden" value="http://tingalayasretreat.metagrapher.com/wp-content/plugins/gravityforms/images/calendar.png">
+                            		</li>
+                            		<li id="field_2_6" class="gfield">
+                            			<label class="gfield_label" for="input_2_6">Number of Guests</label>
+                            			<div class="ginput_container">
+                            				<input name="input_6" id="input_2_6" type="number" step="any" value="" class="small" tabindex="12">
+                            				<div class="instruction ">Please enter a value between <strong>1</strong> and <strong>50</strong>.</div>
+                            			</div>
+                            		</li>
+                            		<li id="field_2_9" class="gfield">
+                            			<label class="gfield_label" for="input_2_9_3">Name</label>
+                            			<div class="ginput_complex ginput_container" id="input_2_9">
+                            				<span id="input_2_9_3_container" class="ginput_left">
+                            					<input type="text" name="input_9.3" id="input_2_9_3" value="" tabindex="13">
+                            					<label for="input_2_9_3">First</label>
+                            				</span>
+                            				<span id="input_2_9_6_container" class="ginput_right">
+                            					<input type="text" name="input_9.6" id="input_2_9_6" value="" tabindex="14">
+                            					<label for="input_2_9_6">Last</label>
+                            				</span>
+                            				<div class="gf_clear gf_clear_complex"></div>
+                            			</div>
+                            		</li>
+                            		<li id="field_2_10" class="gfield">
+                            			<label class="gfield_label" for="input_2_10">Phone</label>
+                            			<div class="ginput_container">
+                            				<input name="input_10" id="input_2_10" type="tel" value="" class="medium" tabindex="15">
+                            			</div>
+                            		</li>
+                            		<li id="field_2_11" class="gfield"><label class="gfield_label" for="input_2_11">Email</label><div class="ginput_container"><input name="input_11" id="input_2_11" type="email" value="" class="medium" tabindex="16"></div></li><li id="field_2_12" class="gfield"><label class="gfield_label" for="input_2_12">Questions, Comments, or Special Requests?</label><div class="ginput_container"><textarea name="input_12" id="input_2_12" class="textarea medium" tabindex="17" rows="10" cols="50"></textarea></div></li><li id="field_2_16" class="gfield    gform_validation_container"><label class="gfield_label" for="input_2_16">Email</label><div class="ginput_container"><input name="input_16" id="input_2_16" type="text" value="" autocomplete="off"></div><div class="gfield_description">This field is for validation purposes and should be left unchanged.</div></li>
+                            </ul></div>
+        <div class="gform_footer top_label"> <input type="submit" id="gform_submit_button_2" class="button gform_button" value="Submit" tabindex="18" onclick="if(window[&quot;gf_submitting_2&quot;]){return false;}  if( !jQuery(&quot;#gform_2&quot;)[0].checkValidity || jQuery(&quot;#gform_2&quot;)[0].checkValidity()){window[&quot;gf_submitting_2&quot;]=true;} "><input type="hidden" name="gform_ajax" value="form_id=2&amp;title=&amp;description=">
+            <input type="hidden" class="gform_hidden" name="is_submit_2" value="1">
+            <input type="hidden" class="gform_hidden" name="gform_submit" value="2">
+            <input type="hidden" class="gform_hidden" name="gform_unique_id" value="">
+            <input type="hidden" class="gform_hidden" name="gform_target_page_number_2" id="gform_target_page_number_2" value="0">
+            <input type="hidden" class="gform_hidden" name="gform_source_page_number_2" id="gform_source_page_number_2" value="1">
+            <input type="hidden" name="gform_field_values" value="">
+            
+        </div>
+                </form>
+                </div>
 
 				
 				</div><!-- .table-box -->

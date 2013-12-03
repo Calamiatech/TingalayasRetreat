@@ -31,10 +31,13 @@
 			}
 		},
 		{
+			"contents": "<?php \n\n/* Template Name: Reservations template */ \n\n?>\n \n<?php get_header( 'custom' ); ?>\n\n<?php if ( have_posts() ) : the_post(); ?>\n\n<?php gravity_form_enqueue_scripts(2, true); ?>\n\n\n<div id=\"content\">\n\n\n	<div id=\"main-content\">\n	\n	\n		<div class=\"page-content page-content-deco default-styles\">\n		\n			\n			<h1><?php the_title(); ?></h1>\n			\n			\n			<div class=\"col-left\">\n	\n				<div class=\"table-box\">\n				\n					<table>\n					\n						<tr>\n						\n							<th class=\"col-rates\">Rates:</th>\n							\n							<th class=\"col-season\">High Season<br /> <?php echo get( 'high_season' ); ?></th>\n							\n							<th class=\"col-season\">Low Season<br /> <?php echo get( 'low_season' ); ?></th>\n						\n						</tr>\n\n						<?php \n						$rates 	= getGroupOrder( 'rates_bungalow', get_the_ID() ); // Get rates \n						$total	= count( $rates );\n						$count	= 0;\n						?>\n						\n						<?php foreach ( $rates as $rate ) : $count ++; ?>\n				\n						<tr<?php echo ( $count == $total ? ' class=\"total\"' : '' ); ?>>\n							<?php if (get( 'res_link', $rate ) !== \"\") : ?>\n							<td class=\"col-rates\"><a href=\"<?php echo get( 'res_link', $rate ); ?>&reservation=1\" target=\"_blank\" class=\"iframe details-button simplelink\"><?php echo get( 'rates_bungalow', $rate ); ?></a></td>\n							<?php else : ?>\n							<td class=\"col-rates\"><strong><?php echo get( 'rates_bungalow', $rate ); ?></strong></td>\n							<?php endif; ?>\n							<td class=\"col-season\"><?php echo get( 'rates_high_season', $rate ); ?></td>\n							\n							<td class=\"col-season\"><?php echo get( 'rates_low_season', $rate ); ?></td>\n						\n						</tr>\n						\n						<?php endforeach; ?>\n					\n					</table>\n					<div class=\"gf_browser_chrome gform_wrapper\" id=\"gform_wrapper_2\"><a id=\"gf_2\" name=\"gf_2\" class=\"gform_anchor\"></a><form method=\"post\" enctype=\"multipart/form-data\" target=\"gform_ajax_frame_2\" id=\"gform_2\" action=\"/reservations/#gf_2\">\n                        <div class=\"gform_body\">\n                            <ul id=\"gform_fields_2\" class=\"gform_fields top_label description_below\">\n                            	<li id=\"field_2_15\" class=\"gfield\">\n                            		<label class=\"gfield_label\">Select Suites</label>\n                            		<div class=\"ginput_container\">\n                            			<ul class=\"gfield_checkbox\" id=\"input_2_15\">\n                            				<li class=\"gchoice_15_1\">\n                            					<input name=\"input_15.1\" type=\"checkbox\" value=\"Seagrape\" id=\"choice_15_1\" tabindex=\"1\">\n                            					<label for=\"choice_15_1\">Seagrape</label>\n                            				</li>\n                            				<li class=\"gchoice_15_2\">\n                            					<input name=\"input_15.2\" type=\"checkbox\" value=\"The Great House\" id=\"choice_15_2\" tabindex=\"2\">\n                            					<label for=\"choice_15_2\">The Great House</label>\n                            				</li>\n                            				<li class=\"gchoice_15_3\">\n                            					<input name=\"input_15.3\" type=\"checkbox\" value=\"Sunset Cottage\" id=\"choice_15_3\" tabindex=\"3\">\n                            					<label for=\"choice_15_3\">Sunset Cottage</label>\n                            				</li>\n                            				<li class=\"gchoice_15_4\">\n                            					<input name=\"input_15.4\" type=\"checkbox\" value=\"Seaview\" id=\"choice_15_4\" tabindex=\"4\">\n                            					<label for=\"choice_15_4\">Seaview</label>\n                            				</li>\n                            				<li class=\"gchoice_15_5\">\n                            					<input name=\"input_15.5\" type=\"checkbox\" value=\"Butterfly Bungalow (A)\" id=\"choice_15_5\" tabindex=\"5\">\n                            					<label for=\"choice_15_5\">Butterfly Bungalow (A)</label>\n                            				</li>\n                            				<li class=\"gchoice_15_6\">\n                            					<input name=\"input_15.6\" type=\"checkbox\" value=\"Butterfly Bungalow (B)\" id=\"choice_15_6\" tabindex=\"6\">\n                            					<label for=\"choice_15_6\">Butterfly Bungalow (B)</label>\n                            				</li>\n                            				<li class=\"gchoice_15_7\">\n                            					<input name=\"input_15.7\" type=\"checkbox\" value=\"Hummingbird Bungalow (C)\" id=\"choice_15_7\" tabindex=\"7\">\n                            					<label for=\"choice_15_7\">Hummingbird Bungalow (C)</label>\n                            				</li>\n                            				<li class=\"gchoice_15_8\">\n                            					<input name=\"input_15.8\" type=\"checkbox\" value=\"Hummingbird Bungalow (D)\" id=\"choice_15_8\" tabindex=\"8\">\n                            					<label for=\"choice_15_8\">Hummingbird Bungalow (D)</label>\n                            				</li>\n                            			</ul>\n                            		</div>\n                            	</li>\n                            	<li id=\"field_2_14\" class=\"gfield\">\n                            		<label class=\"gfield_label\"></label>\n                            		<div class=\"ginput_container\">\n                            			<ul class=\"gfield_checkbox\" id=\"input_2_14\">\n                            				<li class=\"gchoice_14_1\">\n                            					<input name=\"input_14.1\" type=\"checkbox\" value=\"I want to book the entire property\" id=\"choice_14_1\" tabindex=\"9\">\n                            					<label for=\"choice_14_1\">I want to book the entire property</label>\n                            				</li>\n                            			</ul>\n                            		</div>\n                            	</li>\n                            	<li id=\"field_2_1\" class=\"gfield               gfield_contains_required\">\n                            		<label class=\"gfield_label\" for=\"input_2_1\">First Night<span class=\"gfield_required\">*</span></label>\n                            		<div class=\"ginput_container\">\n                            			<input name=\"input_1\" id=\"input_2_1\" type=\"text\" value=\"\" class=\"datepicker medium mdy datepicker_with_icon hasDatepicker\" tabindex=\"10\"> </div>\n                            			<input type=\"hidden\" id=\"gforms_calendar_icon_input_2_1\" class=\"gform_hidden\" value=\"http://tingalayasretreat.metagrapher.com/wp-content/plugins/gravityforms/images/calendar.png\">\n                            		</li>\n                            		<li id=\"field_2_2\" class=\"gfield               gfield_contains_required\">\n                            			<label class=\"gfield_label\" for=\"input_2_2\">Last Night<span class=\"gfield_required\">*</span></label>\n                            			<div class=\"ginput_container\">\n                            				<input name=\"input_2\" id=\"input_2_2\" type=\"text\" value=\"\" class=\"datepicker medium mdy datepicker_with_icon hasDatepicker\" tabindex=\"11\">\n                            			</div>\n                            			<input type=\"hidden\" id=\"gforms_calendar_icon_input_2_2\" class=\"gform_hidden\" value=\"http://tingalayasretreat.metagrapher.com/wp-content/plugins/gravityforms/images/calendar.png\">\n                            		</li>\n                            		<li id=\"field_2_6\" class=\"gfield\">\n                            			<label class=\"gfield_label\" for=\"input_2_6\">Number of Guests</label>\n                            			<div class=\"ginput_container\">\n                            				<input name=\"input_6\" id=\"input_2_6\" type=\"number\" step=\"any\" value=\"\" class=\"small\" tabindex=\"12\">\n                            				<div class=\"instruction \">Please enter a value between <strong>1</strong> and <strong>50</strong>.</div>\n                            			</div>\n                            		</li>\n                            		<li id=\"field_2_9\" class=\"gfield\">\n                            			<label class=\"gfield_label\" for=\"input_2_9_3\">Name</label>\n                            			<div class=\"ginput_complex ginput_container\" id=\"input_2_9\">\n                            				<span id=\"input_2_9_3_container\" class=\"ginput_left\">\n                            					<input type=\"text\" name=\"input_9.3\" id=\"input_2_9_3\" value=\"\" tabindex=\"13\">\n                            					<label for=\"input_2_9_3\">First</label>\n                            				</span>\n                            				<span id=\"input_2_9_6_container\" class=\"ginput_right\">\n                            					<input type=\"text\" name=\"input_9.6\" id=\"input_2_9_6\" value=\"\" tabindex=\"14\">\n                            					<label for=\"input_2_9_6\">Last</label>\n                            				</span>\n                            				<div class=\"gf_clear gf_clear_complex\"></div>\n                            			</div>\n                            		</li>\n                            		<li id=\"field_2_10\" class=\"gfield\">\n                            			<label class=\"gfield_label\" for=\"input_2_10\">Phone</label>\n                            			<div class=\"ginput_container\">\n                            				<input name=\"input_10\" id=\"input_2_10\" type=\"tel\" value=\"\" class=\"medium\" tabindex=\"15\">\n                            			</div>\n                            		</li>\n                            		<li id=\"field_2_11\" class=\"gfield\"><label class=\"gfield_label\" for=\"input_2_11\">Email</label><div class=\"ginput_container\"><input name=\"input_11\" id=\"input_2_11\" type=\"email\" value=\"\" class=\"medium\" tabindex=\"16\"></div></li><li id=\"field_2_12\" class=\"gfield\"><label class=\"gfield_label\" for=\"input_2_12\">Questions, Comments, or Special Requests?</label><div class=\"ginput_container\"><textarea name=\"input_12\" id=\"input_2_12\" class=\"textarea medium\" tabindex=\"17\" rows=\"10\" cols=\"50\"></textarea></div></li><li id=\"field_2_16\" class=\"gfield    gform_validation_container\"><label class=\"gfield_label\" for=\"input_2_16\">Email</label><div class=\"ginput_container\"><input name=\"input_16\" id=\"input_2_16\" type=\"text\" value=\"\" autocomplete=\"off\"></div><div class=\"gfield_description\">This field is for validation purposes and should be left unchanged.</div></li>\n                            </ul></div>\n        <div class=\"gform_footer top_label\"> <input type=\"submit\" id=\"gform_submit_button_2\" class=\"button gform_button\" value=\"Submit\" tabindex=\"18\" onclick=\"if(window[&quot;gf_submitting_2&quot;]){return false;}  if( !jQuery(&quot;#gform_2&quot;)[0].checkValidity || jQuery(&quot;#gform_2&quot;)[0].checkValidity()){window[&quot;gf_submitting_2&quot;]=true;} \"><input type=\"hidden\" name=\"gform_ajax\" value=\"form_id=2&amp;title=&amp;description=\">\n            <input type=\"hidden\" class=\"gform_hidden\" name=\"is_submit_2\" value=\"1\">\n            <input type=\"hidden\" class=\"gform_hidden\" name=\"gform_submit\" value=\"2\">\n            <input type=\"hidden\" class=\"gform_hidden\" name=\"gform_unique_id\" value=\"\">\n            <input type=\"hidden\" class=\"gform_hidden\" name=\"state_2\" value=\"WyJhOjA6e30iLCIyMTNmYTAyNDExODEzZGMxZGU3N2JmOTM5MjY5YzA0YiJd\">\n            <input type=\"hidden\" class=\"gform_hidden\" name=\"gform_target_page_number_2\" id=\"gform_target_page_number_2\" value=\"0\">\n            <input type=\"hidden\" class=\"gform_hidden\" name=\"gform_source_page_number_2\" id=\"gform_source_page_number_2\" value=\"1\">\n            <input type=\"hidden\" name=\"gform_field_values\" value=\"\">\n            \n        </div>\n                </form>\n                </div>\n\n				\n				</div><!-- .table-box -->\n				\n					<script type=\"text/javascript\" src=\"<?php echo bloginfo( 'template_url' ); ?>/fancybox/jquery.mousewheel-3.0.4.pack.js\"></script>\n					\n					<script type=\"text/javascript\" src=\"<?php echo bloginfo( 'template_url' ); ?>/fancybox/jquery.fancybox-1.3.4.pack.js\"></script>\n\n					<script type=\"text/javascript\">\n					\n						//<![CDATA[\n						\n						jQuery( document ).ready( function () {\n													   \n							jQuery( '.details-button' ).fancybox( {\n								width	: 560,\n								height	: 600\n							} );\n						\n						} );\n						\n						//]]>\n					\n					</script>\n				\n				<?php the_content(); ?>\n				\n				\n				<br class=\"clear-fix\" />\n				\n				\n			</div><!-- .col-left -->\n	\n			\n			<div class=\"sidebar\">\n		\n		\n				<?php require( TEMPLATEPATH . '/modules/book-online.php' ); ?>\n		\n		\n				<div id=\"call-us\" class=\"box box-center\">\n				\n					<p><em>Or call us!</em><br /> <strong>202-439-7929</strong><br /> Lisa Rosenstein</p>\n					\n				</div><!-- #call-us .box -->\n\n\n			</div><!-- .sidebar -->\n			\n			\n			<br class=\"clear-fix\" />\n			\n		\n		</div><!-- .page-content -->\n		\n		\n		<div class=\"page-content default-styles\">\n		\n		\n			<div class=\"col-left\">\n			\n				\n				<h3>Policies:</h3>\n\n				<?php \n				$policies 	= getFieldOrder( 'policies_item', 1, 9 ); // Get policies\n				$per_col	= ceil( count( $policies ) / 2 );\n				$count 		= 0;\n				?>\n				\n				<ul class=\"col\">\n				\n				<?php foreach ( $policies as $policy ) : $count ++ ?>\n				\n					<?php if ( get( 'policies_item', 1, $policy, 0, 9 ) != '' ) : ?>\n					\n					<li><?php echo get( 'policies_item', 1, $policy, 0, 9 ); ?></li>\n					\n					<?php endif; ?>\n				\n				<?php if ( $count == $per_col ) : ?>\n				\n				</ul>\n				\n				<ul class=\"col col-r\">\n				\n				<?php endif; ?>\n				\n				<?php endforeach; ?>\n				\n				</ul>\n				\n				\n				<br class=\"clear-fix\" />\n		\n			\n			</div><!-- .col-left -->\n			\n			\n			<div class=\"sidebar\">\n			\n			\n				<div class=\"box box-center\">\n				\n				\n					<p>Visa and MasterCard accepted.</p>\n				\n					<p><img src=\"<?php echo bloginfo( 'template_url' ); ?>/media/cards.gif\" alt=\"\" /></p>\n				\n				\n				</div><!-- .box -->\n			\n			\n			</div><!-- .sidebar -->\n		\n			\n			<br class=\"clear-fix\" />\n			\n		\n		</div><!-- .page-content -->\n\n		\n		<br class=\"clear-fix\" />\n	\n	\n		<span class=\"deco-shadow\">&nbsp;</span>\n	\n\n	</div><!-- #main-content -->\n\n\n	<?php require( TEMPLATEPATH . '/modules/social-networks.php' ); ?>\n\n\n</div><!-- #content -->\n\n\n<?php endif; ?>\n\n<?php get_footer( 'custom' ); ?>",
 			"file": "themes/HotellPress/page-reservations.php",
+			"file_size": 4410,
+			"file_write_time": 130304313362757254,
 			"settings":
 			{
-				"buffer_size": 4176,
+				"buffer_size": 13783,
 				"line_ending": "Windows"
 			}
 		},
@@ -66,7 +69,7 @@
 	"build_system": "Packages/SASS Build/SASS - Compressed.sublime-build",
 	"command_palette":
 	{
-		"height": 242.0,
+		"height": 357.0,
 		"selected_items":
 		[
 			[
@@ -90,7 +93,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 416.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -107,6 +110,8 @@
 	},
 	"file_history":
 	[
+		"/C/Users/metagrapher/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/metagrapher/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/tingalayas-theme/page-reservations.php",
 		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/tingalayas-theme/functions.php",
 		"/C/Users/metagrapher/Dropbox/Metagrapher LLC/Web/TingalayasRetreat/528beb1b413383309-2_20131119_tingalayasretreat_database.sql",
@@ -135,8 +140,6 @@
 		"/C/Users/metagrapher/GitHub/MetaWorld/css/main.sass",
 		"/C/Users/metagrapher/AppData/Roaming/Sublime Text 2/Packages/User/Sass.sublime-settings",
 		"/C/Users/metagrapher/AppData/Roaming/Sublime Text 2/Packages/User/Package Control.sublime-settings",
-		"/C/Users/metagrapher/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/C/Users/metagrapher/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/metagrapher/AppData/Roaming/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
 		"/C/Users/metagrapher/GitHub/MetaWorld/index.php",
 		"/C/Users/metagrapher/Dropbox/Site Folder/metaserver-backup/playground.metagrapher.com/trunk/js/clouds.js",
@@ -258,15 +261,15 @@
 					"file": "themes/HotellPress/page-reservations.php",
 					"settings":
 					{
-						"buffer_size": 4176,
+						"buffer_size": 13783,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1716,
-								1716
+								9133,
+								9133
 							]
 						],
 						"settings":
@@ -275,7 +278,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1080.0,
+						"translation.y": 2268.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -346,8 +349,8 @@
 						"selection":
 						[
 							[
-								764,
-								764
+								1064,
+								1064
 							]
 						],
 						"settings":
@@ -356,7 +359,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 90.0,
+						"translation.y": 1008.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
