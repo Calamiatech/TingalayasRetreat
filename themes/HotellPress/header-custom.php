@@ -49,7 +49,7 @@
         <!--
         <link href="<?php echo TEMPLATE_URL;?>/css/humanity/jquery-ui.css" type="text/css" rel="stylesheet" media="all" />
 		-->
-		<link href="<?php echo TEMPLATE_URL;?>/css/custom-theme/jquery-ui-1.8.21.custom.css" type="text/css" rel="stylesheet" media="all" />
+		<link href="<?php echo TEMPLATE_URL;?>/css/custom-theme/jquery-ui-1.10.3.custom.css" type="text/css" rel="stylesheet" media="all" />
         
 		<link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo( 'template_url' ); ?>/styles/layout.css" media="screen" />
 
