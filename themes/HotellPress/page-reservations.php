@@ -132,7 +132,6 @@
                 </div>
             </div> <!-- .gform_wrapper -->
             </form>
-		</div> <!-- .page_content -->
 			
 				<script type="text/javascript" src="<?php echo bloginfo( 'template_url' ); ?>/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
 				
