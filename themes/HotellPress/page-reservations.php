@@ -12,70 +12,56 @@
 
 
 <div id="content">
-
-
 	<div id="main-content">
-	
-	
 		<div class="page-content page-content-deco default-styles">
-		
-			
 			<h1><?php the_title(); ?></h1>
-		
-	
 			<form method="post" enctype="multipart/form-data" target="gform_ajax_frame_2" id="gform_2" action="/reservations/#gf_2">
 			<div class="table-box">
 				<table>
-				
+				    <!-- Table Header -->
 					<tr>
-
 						<th class="col-book">More Info</th> 
-					
 						<th class="col-rates">Rates:</th>
-						
 						<th class="col-season">High Season<br /> <?php echo get( 'high_season' ); ?></th>
-						
 						<th class="col-season">Low Season<br /> <?php echo get( 'low_season' ); ?></th>
-					
 					</tr>
-
-					<?php 
-					$rates 	= getGroupOrder( 'rates_bungalow', get_the_ID() ); // Get rates 
-					$total	= count( $rates );
-					$count	= 0;
-					?>
+					<!-- End Table Header -->
 					
-					<?php foreach ( $rates as $rate ) : $count ++; ?>
-			
+				<?php // Loop through Bungalow Rooms ?>
+				<?php 
+				$rates 	= getGroupOrder( 'rates_bungalow', get_the_ID() ); // Get rates 
+				$total	= count( $rates );
+				$count	= 0;
+				?>
+					
+				<?php foreach ( $rates as $rate ) : $count ++; ?>
 					<tr<?php echo ( $count == $total ? ' class="total"' : '' ); ?>>
 
 						<td class="col-book">
 							<input name="input_15.<?php echo $count ?>" type="checkbox" value="<?php echo get( 'rates_bungalow', $rate ); ?>" id="choice_15_<?php echo $count ?>" tabindex="<?php echo $count ?>">
 						</td> 
-						<?php if (get( 'res_link', $rate ) !== "") : ?>
+						
+					<?php if (get( 'res_link', $rate ) !== "") : ?>
 						<td class="col-rates">
 							<a href="<?php echo get( 'res_link', $rate ); ?>&reservation=1" target="_blank" class="iframe details-button simplelink">
 								<?php echo get( 'rates_bungalow', $rate ); ?>
 							</a>
 						</td>
-						<?php else : ?>
+					<?php else : ?>
 						<td class="col-rates"><strong><?php echo get( 'rates_bungalow', $rate ); ?></strong></td>
-						<?php endif; ?>
-						<td class="col-season"><?php echo get( 'rates_high_season', $rate ); ?></td>
+					<?php endif; ?>
 						
+						<td class="col-season"><?php echo get( 'rates_high_season', $rate ); ?></td>
 						<td class="col-season"><?php echo get( 'rates_low_season', $rate ); ?></td>
 					
 					</tr>
-					
-					<?php endforeach; ?>
+				<?php endforeach; ?>
 				
 				</table>
-				
-                </div>
-			</div><!-- .table-box -->
-			<p><em>* Rent the entire property for your large groups, family gatherings or wedding and let Tingalaya's Retreat be your perfect home in Negril.</em></p>
-			<div class="gf_browser_chrome gform_wrapper" id="gform_wrapper_2">
-				<a id="gf_2" name="gf_2" class="gform_anchor"></a>
+            </div><!-- .table-box -->
+    		<p><em>* Rent the entire property for your large groups, family gatherings or wedding and let Tingalaya's Retreat be your perfect home in Negril.</em></p>
+    		<div class="gf_browser_chrome gform_wrapper" id="gform_wrapper_2">
+    			<a id="gf_2" name="gf_2" class="gform_anchor"></a>
                 <div class="gform_body">
                     <ul id="gform_fields_2" class="gform_fields top_label description_below">
                     	<li id="field_2_1" class="gfield gfield_contains_required">
@@ -132,7 +118,7 @@
                 		<li id="field_2_16" class="gfield    gform_validation_container">
                 		    <label class="gfield_label" for="input_2_16">Email</label><div class="ginput_container"><input name="input_16" id="input_2_16" type="text" value="" autocomplete="off"></div><div class="gfield_description">This field is for validation purposes and should be left unchanged.</div></li>
                     </ul>
-                </div>
+                </div> <!-- .gform_body -->
                 <div class="gform_footer top_label"> 
                     <input type="submit" id="gform_submit_button_2" class="button gform_button" value="Submit" tabindex="18" onclick="if(window[&quot;gf_submitting_2&quot;]){return false;}  if( !jQuery(&quot;#gform_2&quot;)[0].checkValidity || jQuery(&quot;#gform_2&quot;)[0].checkValidity()){window[&quot;gf_submitting_2&quot;]=true;} "><input type="hidden" name="gform_ajax" value="form_id=2&amp;title=&amp;description=">
                     <input type="hidden" class="gform_hidden" name="is_submit_2" value="1">
@@ -144,7 +130,9 @@
                     <input type="hidden" name="gform_field_values" value="">
     
                 </div>
-                </form>
+            </div> <!-- .gform_wrapper -->
+            </form>
+		</div> <!-- .page_content -->
 			
 				<script type="text/javascript" src="<?php echo bloginfo( 'template_url' ); ?>/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
 				
