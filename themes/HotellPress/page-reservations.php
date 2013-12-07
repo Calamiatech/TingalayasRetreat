@@ -164,7 +164,7 @@
 				
 			</div><!-- .col-left -->
 	
-			
+			<?php /* ?>
 			<div class="sidebar">
 		
 		
@@ -178,7 +178,7 @@
 				</div><!-- #call-us .box -->
 
 
-			</div><!-- .sidebar -->
+			</div><!-- .sidebar --><?php */ ?>
 			
 			
 			<br class="clear-fix" />
