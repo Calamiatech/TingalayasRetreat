@@ -964,6 +964,10 @@ margin-bottom: 10px;
 	font-size: 20px;
 }
 
+.reservation_form textarea.textarea {
+	padding: 40px 0 0 5px;
+}
+
 /* .post-comment */
 
 .post-comment {
