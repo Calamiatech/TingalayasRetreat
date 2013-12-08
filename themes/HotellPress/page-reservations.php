@@ -84,7 +84,7 @@
             			<span class="ginput_container">
             				<input name="input_6" id="input_2_6" type="number" step="any" value="" class="small" tabindex="<?php echo $count+5 ?>">
             			</span>.<br>
-            			Please contact me at
+            			Please contact me soonest at
             			<label class="gfield_label row3" for="input_2_10">Phone</label>
             			<span class="ginput_container"><input name="input_10" id="input_2_10" type="tel" value="" class="medium" tabindex="<?php echo $count+6 ?>"></span>
             			 or
