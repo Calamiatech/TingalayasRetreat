@@ -950,6 +950,14 @@ margin-bottom: 10px;
 .reservation_form label.row2 {
 	top: 8.5%;
 }
+.reservation_form label.row2 {
+	top: 17%;
+}
+
+.reservation_form input {
+	font-size: 18px;
+	padding: 2px;
+}
 
 .reservation_form p {
 	line-height: 3em;
