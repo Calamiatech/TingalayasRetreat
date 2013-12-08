@@ -80,10 +80,10 @@
             			</span>
             			<input type="hidden" id="gforms_calendar_icon_input_2_2" class="gform_hidden" value="http://tingalayasretreat.metagrapher.com/wp-content/plugins/gravityforms/images/calendar.png">
                 		for a party of 
-                		<label class="gfield_label" for="input_2_6">Number of Guests</label>
+                		<label class="gfield_label row2" for="input_2_6">Number of Guests</label>
             			<span class="ginput_container">
             				<input name="input_6" id="input_2_6" type="number" step="any" value="" class="small" tabindex="12">
-            				<div class="instruction ">Please enter a value between <strong>1</strong> and <strong>19</strong>.</div>
+            				<span class="instruction ">Please enter a value between <strong>1</strong> and <strong>19</strong>.</span>
             			</span>
             		</p>
 

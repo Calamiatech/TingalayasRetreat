@@ -941,6 +941,7 @@ margin-bottom: 10px;
 
 .reservation_form label {
 	position: absolute;
+	font-size: 14px;
 }
 
 .reservation_form label.top {
@@ -952,6 +953,7 @@ margin-bottom: 10px;
 
 .reservation_form p {
 	line-height: 3em;
+	font-size: 20px;
 }
 
 /* .post-comment */
