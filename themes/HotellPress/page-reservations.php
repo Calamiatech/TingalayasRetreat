@@ -20,7 +20,7 @@
 				<table>
 				    <!-- Table Header -->
 					<tr>
-						<th class="col-rates">Rates:</th>
+						<th class="col-rates"></th>
 						<th class="col-season">High Season<br /> <?php echo get( 'high_season' ); ?></th>
 						<th class="col-season">Low Season<br /> <?php echo get( 'low_season' ); ?></th>
 						<th class="col-book">Reserve This Suite</th> 
