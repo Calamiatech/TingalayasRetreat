@@ -968,6 +968,19 @@ margin-bottom: 10px;
 	padding: 40px 0 0 5px;
 }
 
+.reservation_form li#field_2_12>label {
+	left: 4%;
+}
+
+.reservation_form input[type="submit"] {
+	background: url("http://www.tingalayasretreat.com/wp-content/themes/HotellPress/images/custom/button-submit.png") 50% no-repeat;
+	border: none;
+	text-indent: -20000px;
+	height: 37px;
+	width: 100%;
+	cursor: pointer;
+}
+
 /* .post-comment */
 
 .post-comment {
