@@ -93,53 +93,6 @@
             		</p>
 
                     <ul id="gform_fields_2" class="gform_fields top_label description_below">
-                    	<li id="field_2_1" class="gfield gfield_contains_required">
-                    		<label class="gfield_label" for="input_2_1">First Night<span class="gfield_required">*</span></label>
-                    		<div class="ginput_container">
-                    			<input name="input_1" id="input_2_1" type="text" value="" class="datepicker medium mdy datepicker_with_icon hasDatepicker" tabindex="10"> 
-                    		</div>
-                    		<input type="hidden" id="gforms_calendar_icon_input_2_1" class="gform_hidden" value="http://tingalayasretreat.metagrapher.com/wp-content/plugins/gravityforms/images/calendar.png">
-                		</li>
-                		<li id="field_2_2" class="gfield gfield_contains_required">
-                			<label class="gfield_label" for="input_2_2">Last Night<span class="gfield_required">*</span></label>
-                			<div class="ginput_container">
-                				<input name="input_2" id="input_2_2" type="text" value="" class="datepicker medium mdy datepicker_with_icon hasDatepicker" tabindex="11">
-                			</div>
-                			<input type="hidden" id="gforms_calendar_icon_input_2_2" class="gform_hidden" value="http://tingalayasretreat.metagrapher.com/wp-content/plugins/gravityforms/images/calendar.png">
-                		</li>
-                		<li id="field_2_6" class="gfield">
-                			<label class="gfield_label" for="input_2_6">Number of Guests</label>
-                			<div class="ginput_container">
-                				<input name="input_6" id="input_2_6" type="number" step="any" value="" class="small" tabindex="12">
-                				<div class="instruction ">Please enter a value between <strong>1</strong> and <strong>19</strong>.</div>
-                			</div>
-                		</li>
-                		<li id="field_2_9" class="gfield">
-                			<label class="gfield_label" for="input_2_9_3">Name</label>
-                			<div class="ginput_complex ginput_container" id="input_2_9">
-                				<span id="input_2_9_3_container" class="ginput_left">
-                					<input type="text" name="input_9.3" id="input_2_9_3" value="" tabindex="13">
-                					<label for="input_2_9_3">First</label>
-                				</span>
-                				<span id="input_2_9_6_container" class="ginput_right">
-                					<input type="text" name="input_9.6" id="input_2_9_6" value="" tabindex="14">
-                					<label for="input_2_9_6">Last</label>
-                				</span>
-                				<div class="gf_clear gf_clear_complex"></div>
-                			</div>
-                		</li>
-                		<li id="field_2_10" class="gfield">
-                			<label class="gfield_label" for="input_2_10">Phone</label>
-                			<div class="ginput_container">
-                				<input name="input_10" id="input_2_10" type="tel" value="" class="medium" tabindex="15">
-                			</div>
-                		</li>
-                		<li id="field_2_11" class="gfield">
-                		    <label class="gfield_label" for="input_2_11">Email</label>
-                		    <div class="ginput_container">
-                		        <input name="input_11" id="input_2_11" type="email" value="" class="medium" tabindex="16">
-                		    </div>
-                		</li>
                 		<li id="field_2_12" class="gfield">
                 		    <label class="gfield_label" for="input_2_12">Questions, Comments, or Special Requests?</label>
                 		    <div class="ginput_container"><textarea name="input_12" id="input_2_12" class="textarea medium" tabindex="17" rows="10" cols="50"></textarea></div>
