@@ -65,8 +65,8 @@
     			<a id="gf_2" name="gf_2" class="gform_anchor"></a>
                 <div class="gform_body">
                 	<p> Hello, my name is 
-                		<input type="text" name="input_9.3" id="input_2_9_3" value="" tabindex="13"><label for="input_2_9_3" class="top">First</label>
-                		<input type="text" name="input_9.6" id="input_2_9_6" value="" tabindex="14"><label for="input_2_9_6" class="top">Last</label>. &nbsp;&nbsp;
+                		<label for="input_2_9_3" class="top">First</label><input type="text" name="input_9.3" id="input_2_9_3" value="" tabindex="13">
+                		<label for="input_2_9_6" class="top">Last</label><input type="text" name="input_9.6" id="input_2_9_6" value="" tabindex="14">. &nbsp;&nbsp;
                 		I am interested in reserving the above selected rooms from
                 		<label class="gfield_label row2" for="input_2_1">First Night<span class="gfield_required">*</span></label>
                 		<span class="ginput_container">
