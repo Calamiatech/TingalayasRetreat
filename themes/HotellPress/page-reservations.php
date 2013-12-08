@@ -66,7 +66,7 @@
                 <div class="gform_body">
                 	<p> Hello, my name is 
                 		<label for="input_2_9_3" class="top">First</label><input type="text" name="input_9.3" id="input_2_9_3" value="" tabindex="13">
-                		<label for="input_2_9_6" class="top">Last</label><input type="text" name="input_9.6" id="input_2_9_6" value="" tabindex="14">. &nbsp;&nbsp;
+                		<label for="input_2_9_6" class="top">Last</label><input type="text" name="input_9.6" id="input_2_9_6" value="" tabindex="14">. &nbsp;
                 		I am interested in reserving the above selected rooms from
                 		<label class="gfield_label row2" for="input_2_1">First Night<span class="gfield_required">*</span></label>
                 		<span class="ginput_container">
@@ -79,12 +79,18 @@
             				<input name="input_2" id="input_2_2" type="text" value="" class="datepicker medium mdy datepicker_with_icon hasDatepicker" tabindex="11">
             			</span>
             			<input type="hidden" id="gforms_calendar_icon_input_2_2" class="gform_hidden" value="http://tingalayasretreat.metagrapher.com/wp-content/plugins/gravityforms/images/calendar.png">
-                		for a party of 
+                		for a party of&nbsp;
                 		<label class="gfield_label row2" for="input_2_6">Number of Guests</label>
             			<span class="ginput_container">
             				<input name="input_6" id="input_2_6" type="number" step="any" value="" class="small" tabindex="12">
             				<span class="instruction ">Please enter a value between <strong>1</strong> and <strong>19</strong>.</span>
-            			</span>
+            			</span>. &nbsp;
+            			I can be be reached at 
+            			<label class="gfield_label" for="input_2_10">Phone</label>
+            			<span class="ginput_container"><input name="input_10" id="input_2_10" type="tel" value="" class="medium" tabindex="15"></span>
+            			 or
+            			<label class="gfield_label" for="input_2_11">Email</label>
+            			<span class="ginput_container"><input name="input_11" id="input_2_11" type="email" value="" class="medium" tabindex="16"> </span>
             		</p>
 
                     <ul id="gform_fields_2" class="gform_fields top_label description_below">
