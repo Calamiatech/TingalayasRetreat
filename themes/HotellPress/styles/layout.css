@@ -943,6 +943,17 @@ margin-bottom: 10px;
 	position: absolute;
 }
 
+.reservation_form label.top {
+	top: 0%;
+}
+.reservation_form label.row2 {
+	top: 9%;
+}
+
+.reservation_form p {
+	line-height: 3em;
+}
+
 /* .post-comment */
 
 .post-comment {
