@@ -20,10 +20,10 @@
 				<table>
 				    <!-- Table Header -->
 					<tr>
-						<th class="col-book">More Info</th> 
 						<th class="col-rates">Rates:</th>
 						<th class="col-season">High Season<br /> <?php echo get( 'high_season' ); ?></th>
 						<th class="col-season">Low Season<br /> <?php echo get( 'low_season' ); ?></th>
+						<th class="col-book">Reserve This Suite</th> 
 					</tr>
 					<!-- End Table Header -->
 					
@@ -36,10 +36,6 @@
 					
 				<?php foreach ( $rates as $rate ) : $count ++; ?>
 					<tr<?php echo ( $count == $total ? ' class="total"' : '' ); ?>>
-
-						<td class="col-book">
-							<input name="input_15.<?php echo $count ?>" type="checkbox" value="<?php echo get( 'rates_bungalow', $rate ); ?>" id="choice_15_<?php echo $count ?>" tabindex="<?php echo $count ?>">
-						</td> 
 						
 					<?php if (get( 'res_link', $rate ) !== "") : ?>
 						<td class="col-rates">
@@ -53,6 +49,10 @@
 						
 						<td class="col-season"><?php echo get( 'rates_high_season', $rate ); ?></td>
 						<td class="col-season"><?php echo get( 'rates_low_season', $rate ); ?></td>
+
+						<td class="col-book">
+							<input name="input_15.<?php echo $count ?>" type="checkbox" value="<?php echo get( 'rates_bungalow', $rate ); ?>" id="choice_15_<?php echo $count ?>" tabindex="<?php echo $count ?>">
+						</td> 
 					
 					</tr>
 				<?php endforeach; ?>
