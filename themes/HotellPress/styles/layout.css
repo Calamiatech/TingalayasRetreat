@@ -956,11 +956,11 @@ margin-bottom: 10px;
 	font-size: 20px;
 }
 
-.reservation_form label[for="input_2_6"]:after {
+.reservation_form label[for="input_2_6"]+span:after {
 	content: "Please enter a value between <strong>1</strong> and <strong>19</strong>.";
 	font-size: 11px;
 }
-}
+
 .reservation_form #input_2_6:after{
 	content: "Please enter a value between <strong>1</strong> and <strong>19</strong>.";
 	font-size: 11px;
