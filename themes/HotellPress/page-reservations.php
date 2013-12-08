@@ -65,37 +65,37 @@
     			<a id="gf_2" name="gf_2" class="gform_anchor"></a>
                 <div class="gform_body">
                 	<p> Hello, my name is 
-                		<label for="input_2_9_3" class="top">First</label><input type="text" name="input_9.3" id="input_2_9_3" value="" tabindex="13">
-                		<label for="input_2_9_6" class="top">Last</label><input type="text" name="input_9.6" id="input_2_9_6" value="" tabindex="14">. &nbsp;
+                		<label for="input_2_9_3" class="top">First</label><input type="text" name="input_9.3" id="input_2_9_3" value="" tabindex="<?php echo $count+1 ?>">
+                		<label for="input_2_9_6" class="top">Last</label><input type="text" name="input_9.6" id="input_2_9_6" value="" tabindex="<?php echo $count+2 ?>">. &nbsp;
                 		I am interested in reserving the above selected rooms from
                 		<label class="gfield_label row2" for="input_2_1">First Night<span class="gfield_required">*</span></label>
                 		<span class="ginput_container">
-                			<input name="input_1" id="input_2_1" type="text" value="" class="datepicker medium mdy datepicker_with_icon hasDatepicker" tabindex="10"> 
+                			<input name="input_1" id="input_2_1" type="text" value="" class="datepicker medium mdy datepicker_with_icon hasDatepicker" tabindex="<?php echo $count+3 ?>"> 
                 		</span>
                 		<input type="hidden" id="gforms_calendar_icon_input_2_1" class="gform_hidden" value="http://tingalayasretreat.metagrapher.com/wp-content/plugins/gravityforms/images/calendar.png">
                 		to
                 		<label class="gfield_label row2" for="input_2_2">Last Night<span class="gfield_required">*</span></label>
             			<span class="ginput_container">
-            				<input name="input_2" id="input_2_2" type="text" value="" class="datepicker medium mdy datepicker_with_icon hasDatepicker" tabindex="11">
+            				<input name="input_2" id="input_2_2" type="text" value="" class="datepicker medium mdy datepicker_with_icon hasDatepicker" tabindex="<?php echo $count+4 ?>">
             			</span>
             			<input type="hidden" id="gforms_calendar_icon_input_2_2" class="gform_hidden" value="http://tingalayasretreat.metagrapher.com/wp-content/plugins/gravityforms/images/calendar.png">
                 		<br>for a party of&nbsp;
                 		<label class="gfield_label row3" for="input_2_6">Number of Guests</label>
             			<span class="ginput_container">
-            				<input name="input_6" id="input_2_6" type="number" step="any" value="" class="small" tabindex="12">
+            				<input name="input_6" id="input_2_6" type="number" step="any" value="" class="small" tabindex="<?php echo $count+5 ?>">
             			</span>.&nbsp;
             			Please contact me at
             			<label class="gfield_label row3" for="input_2_10">Phone</label>
-            			<span class="ginput_container"><input name="input_10" id="input_2_10" type="tel" value="" class="medium" tabindex="15"></span>
+            			<span class="ginput_container"><input name="input_10" id="input_2_10" type="tel" value="" class="medium" tabindex="<?php echo $count+6 ?>"></span>
             			 or
             			<label class="gfield_label row3" for="input_2_11">Email</label>
-            			<span class="ginput_container"><input name="input_11" id="input_2_11" type="email" value="" class="medium" tabindex="16"> </span>
+            			<span class="ginput_container"><input name="input_11" id="input_2_11" type="email" value="" class="medium" tabindex="<?php echo $count+7 ?>"> </span>
             		</p>
 
                     <ul id="gform_fields_2" class="gform_fields top_label description_below">
                 		<li id="field_2_12" class="gfield">
                 		    <label class="gfield_label" for="input_2_12">Questions, Comments, or Special Requests?</label>
-                		    <div class="ginput_container"><textarea name="input_12" id="input_2_12" class="textarea medium" tabindex="17" rows="10" cols="50"></textarea></div>
+                		    <div class="ginput_container"><textarea name="input_12" id="input_2_12" class="textarea medium" tabindex="<?php echo $count+8 ?>" rows="10" cols="50"></textarea></div>
                 		</li>
                 		<li id="field_2_16" class="gfield    gform_validation_container">
                 		    <label class="gfield_label" for="input_2_16">Email</label><div class="ginput_container"><input name="input_16" id="input_2_16" type="text" value="" autocomplete="off"></div><div class="gfield_description">This field is for validation purposes and should be left unchanged.</div></li>
