@@ -890,6 +890,51 @@ margin-bottom: 10px;
 	color: red;
 }
 
+/* .gform_wrapper */
+
+.gform_wrapper {
+	background: #e5e5e5; /* Old browsers */
+	background: -moz-linear-gradient(left,  #e5e5e5 1%, #f2f2f2 49%, #e5e5e5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(1%,#e5e5e5), color-stop(49%,#f2f2f2), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #e5e5e5 1%,#f2f2f2 49%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #e5e5e5 1%,#f2f2f2 49%,#e5e5e5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #e5e5e5 1%,#f2f2f2 49%,#e5e5e5 100%); /* IE10+ */
+	background: linear-gradient(to right,  #e5e5e5 1%,#f2f2f2 49%,#e5e5e5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 */
+	border: 1px solid #3c3c3c;
+  position: relative;
+
+}
+.gform_wrapper:before, .gform_wrapper:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.gform_wrapper:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
 
 /* .post-comment */
 
