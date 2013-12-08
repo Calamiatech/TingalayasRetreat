@@ -79,11 +79,11 @@
             				<input name="input_2" id="input_2_2" type="text" value="" class="datepicker medium mdy datepicker_with_icon hasDatepicker" tabindex="<?php echo $count+4 ?>">
             			</span>
             			<input type="hidden" id="gforms_calendar_icon_input_2_2" class="gform_hidden" value="http://tingalayasretreat.metagrapher.com/wp-content/plugins/gravityforms/images/calendar.png">
-                		<br>for a party of&nbsp;
-                		<label class="gfield_label row3" for="input_2_6">Number of Guests</label>
+                		for a party of&nbsp;
+                		<label class="gfield_label row2" for="input_2_6">Number of Guests</label>
             			<span class="ginput_container">
             				<input name="input_6" id="input_2_6" type="number" step="any" value="" class="small" tabindex="<?php echo $count+5 ?>">
-            			</span>.&nbsp;
+            			</span>.<br>
             			Please contact me at
             			<label class="gfield_label row3" for="input_2_10">Phone</label>
             			<span class="ginput_container"><input name="input_10" id="input_2_10" type="tel" value="" class="medium" tabindex="<?php echo $count+6 ?>"></span>
