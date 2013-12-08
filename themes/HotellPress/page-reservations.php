@@ -80,15 +80,15 @@
             			</span>
             			<input type="hidden" id="gforms_calendar_icon_input_2_2" class="gform_hidden" value="http://tingalayasretreat.metagrapher.com/wp-content/plugins/gravityforms/images/calendar.png">
                 		<br>for a party of&nbsp;
-                		<label class="gfield_label row2" for="input_2_6">Number of Guests</label>
+                		<label class="gfield_label row3" for="input_2_6">Number of Guests</label>
             			<span class="ginput_container">
             				<input name="input_6" id="input_2_6" type="number" step="any" value="" class="small" tabindex="12">
-            			</span>.<br>
+            			</span>.&nbsp;
             			Please contact me at
-            			<label class="gfield_label" for="input_2_10">Phone</label>
+            			<label class="gfield_label row3" for="input_2_10">Phone</label>
             			<span class="ginput_container"><input name="input_10" id="input_2_10" type="tel" value="" class="medium" tabindex="15"></span>
             			 or
-            			<label class="gfield_label" for="input_2_11">Email</label>
+            			<label class="gfield_label row3" for="input_2_11">Email</label>
             			<span class="ginput_container"><input name="input_11" id="input_2_11" type="email" value="" class="medium" tabindex="16"> </span>
             		</p>
 
