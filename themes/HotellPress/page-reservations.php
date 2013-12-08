@@ -60,9 +60,33 @@
 				</table>
             </div><!-- .table-box -->
     		<p><em>* Rent the entire property for your large groups, family gatherings or wedding and let Tingalaya's Retreat be your perfect home in Negril.</em></p>
+
     		<div class="gf_browser_chrome gform_wrapper" id="gform_wrapper_2">
     			<a id="gf_2" name="gf_2" class="gform_anchor"></a>
                 <div class="gform_body">
+                	<p> Hello, my name is 
+                		<input type="text" name="input_9.3" id="input_2_9_3" value="" tabindex="13"><label for="input_2_9_3">First</label>
+                		<input type="text" name="input_9.6" id="input_2_9_6" value="" tabindex="14"><label for="input_2_9_6">Last</label>.
+                	</p>
+                	<p>I am interested in reserving the above selected rooms from
+                		<label class="gfield_label" for="input_2_1">First Night<span class="gfield_required">*</span></label>
+                		<span class="ginput_container">
+                			<input name="input_1" id="input_2_1" type="text" value="" class="datepicker medium mdy datepicker_with_icon hasDatepicker" tabindex="10"> 
+                		</span>
+                		<input type="hidden" id="gforms_calendar_icon_input_2_1" class="gform_hidden" value="http://tingalayasretreat.metagrapher.com/wp-content/plugins/gravityforms/images/calendar.png">
+                		to
+                		<label class="gfield_label" for="input_2_2">Last Night<span class="gfield_required">*</span></label>
+            			<span class="ginput_container">
+            				<input name="input_2" id="input_2_2" type="text" value="" class="datepicker medium mdy datepicker_with_icon hasDatepicker" tabindex="11">
+            			</span>
+            			<input type="hidden" id="gforms_calendar_icon_input_2_2" class="gform_hidden" value="http://tingalayasretreat.metagrapher.com/wp-content/plugins/gravityforms/images/calendar.png">
+                		for a party of 
+                		<label class="gfield_label" for="input_2_6">Number of Guests</label>
+            			<span class="ginput_container">
+            				<input name="input_6" id="input_2_6" type="number" step="any" value="" class="small" tabindex="12">
+            				<div class="instruction ">Please enter a value between <strong>1</strong> and <strong>19</strong>.</div>
+            			</span>
+            		</p>
                     <ul id="gform_fields_2" class="gform_fields top_label description_below">
                     	<li id="field_2_1" class="gfield gfield_contains_required">
                     		<label class="gfield_label" for="input_2_1">First Night<span class="gfield_required">*</span></label>
