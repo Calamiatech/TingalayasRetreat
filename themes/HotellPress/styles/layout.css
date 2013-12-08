@@ -939,6 +939,10 @@ margin-bottom: 10px;
   left: auto;
 }
 
+.reservation_form label {
+	position: absolute;
+}
+
 /* .post-comment */
 
 .post-comment {

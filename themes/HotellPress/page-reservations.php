@@ -61,14 +61,12 @@
             </div><!-- .table-box -->
     		<p><em>* Rent the entire property for your large groups, family gatherings or wedding and let Tingalaya's Retreat be your perfect home in Negril.</em></p>
 
-    		<div class="gf_browser_chrome gform_wrapper" id="gform_wrapper_2">
+    		<div class="gf_browser_chrome gform_wrapper reservation_form" id="gform_wrapper_2">
     			<a id="gf_2" name="gf_2" class="gform_anchor"></a>
                 <div class="gform_body">
                 	<p> Hello, my name is 
                 		<input type="text" name="input_9.3" id="input_2_9_3" value="" tabindex="13"><label for="input_2_9_3">First</label>
-                		<input type="text" name="input_9.6" id="input_2_9_6" value="" tabindex="14"><label for="input_2_9_6">Last</label>.
-                	</p>
-                	<p>I am interested in reserving the above selected rooms from
+                		<input type="text" name="input_9.6" id="input_2_9_6" value="" tabindex="14"><label for="input_2_9_6">Last</label>. I am interested in reserving the above selected rooms from
                 		<label class="gfield_label" for="input_2_1">First Night<span class="gfield_required">*</span></label>
                 		<span class="ginput_container">
                 			<input name="input_1" id="input_2_1" type="text" value="" class="datepicker medium mdy datepicker_with_icon hasDatepicker" tabindex="10"> 
