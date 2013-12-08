@@ -83,9 +83,8 @@
                 		<label class="gfield_label row2" for="input_2_6">Number of Guests</label>
             			<span class="ginput_container">
             				<input name="input_6" id="input_2_6" type="number" step="any" value="" class="small" tabindex="12">
-            				<span class="instruction ">Please enter a value between <strong>1</strong> and <strong>19</strong>.</span>
             			</span>. &nbsp;
-            			I can be be reached at 
+            			Please contact me at
             			<label class="gfield_label" for="input_2_10">Phone</label>
             			<span class="ginput_container"><input name="input_10" id="input_2_10" type="tel" value="" class="medium" tabindex="15"></span>
             			 or
