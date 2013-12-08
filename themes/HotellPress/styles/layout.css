@@ -902,8 +902,11 @@ margin-bottom: 10px;
 	background: linear-gradient(to right,  #e5e5e5 1%,#f2f2f2 49%,#e5e5e5 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 */
 	border: 1px solid #3c3c3c;
-  position: relative;
-
+  	position: relative;
+  	max-width: 100% !important;
+  	margin: 40px auto;
+  	padding: 20px;
+  	font: italic 14px/26px Georgia, "Times New Roman", Times, serif;
 }
 .gform_wrapper:before, .gform_wrapper:after
 {
