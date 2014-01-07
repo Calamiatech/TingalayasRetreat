@@ -131,7 +131,7 @@ function inject_required_scripts() {
 add_action('wp_head', 'inject_required_scripts');
 
 
-add_filter("gform_field_choices", "suites", 10, 2);
+add_filter("gform_field_choices", "decode_specialchars", 10, 2);
 function decode_specialchars($choices, $field){
     $choices = htmlspecialchars_decode($choices);
     return $choices;
