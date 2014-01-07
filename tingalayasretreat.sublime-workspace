@@ -34,7 +34,7 @@
 			"file": "themes/HotellPress/page-reservations.php",
 			"settings":
 			{
-				"buffer_size": 10511,
+				"buffer_size": 4095,
 				"line_ending": "Windows"
 			}
 		},
@@ -63,35 +63,11 @@
 			}
 		},
 		{
-			"file": "themes/HotellPress/css/custom-theme/jquery-ui-1.8.21.custom.css",
-			"settings":
-			{
-				"buffer_size": 21558,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "themes/HotellPress/header-custom.php",
 			"settings":
 			{
 				"buffer_size": 4431,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Windows/System32/Drivers/etc/hosts",
-			"settings":
-			{
-				"buffer_size": 872,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/metagrapher/Dropbox/Metagrapher LLC/Web/Orange32/OkayPlayer/MAGNA OPERA GROUP   Great Works.htm",
-			"settings":
-			{
-				"buffer_size": 12144,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -139,6 +115,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/steve_000/Documents/GitHub/TingalayasRetreat/themes/HotellPress/css/custom-theme/jquery-ui-1.8.21.custom.css",
 		"/C/Windows/System32/Drivers/etc/hosts",
 		"/C/Users/metagrapher/Dropbox/Metagrapher LLC/Web/Orange32/OkayPlayer/MAGNA OPERA GROUP   Great Works.htm",
 		"/C/Users/metagrapher/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
@@ -230,7 +207,7 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -292,15 +269,15 @@
 					"file": "themes/HotellPress/page-reservations.php",
 					"settings":
 					{
-						"buffer_size": 10511,
+						"buffer_size": 4095,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5483,
-								5483
+								4095,
+								4095
 							]
 						],
 						"settings":
@@ -363,7 +340,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 523.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -390,39 +367,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 168.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "themes/HotellPress/css/custom-theme/jquery-ui-1.8.21.custom.css",
-					"settings":
-					{
-						"buffer_size": 21558,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								988,
-								988
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "themes/HotellPress/header-custom.php",
 					"settings":
 					{
@@ -443,61 +394,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 78.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/C/Windows/System32/Drivers/etc/hosts",
-					"settings":
-					{
-						"buffer_size": 872,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								818,
-								804
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/C/Users/metagrapher/Dropbox/Metagrapher LLC/Web/Orange32/OkayPlayer/MAGNA OPERA GROUP   Great Works.htm",
-					"settings":
-					{
-						"buffer_size": 12144,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8180,
-								8183
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2184.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -565,6 +462,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 317.0,
+	"side_bar_width": 250.0,
 	"status_bar_visible": true
 }
