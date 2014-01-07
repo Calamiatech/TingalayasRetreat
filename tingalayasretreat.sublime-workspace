@@ -26,7 +26,7 @@
 			"file": "themes/HotellPress/functions.php",
 			"settings":
 			{
-				"buffer_size": 4869,
+				"buffer_size": 5055,
 				"line_ending": "Windows"
 			}
 		},
@@ -207,7 +207,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -242,15 +242,15 @@
 					"file": "themes/HotellPress/functions.php",
 					"settings":
 					{
-						"buffer_size": 4869,
+						"buffer_size": 5055,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4868,
-								4868
+								4585,
+								4585
 							]
 						],
 						"settings":
@@ -259,7 +259,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 390.0,
+						"translation.y": 1558.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
