@@ -1,5 +1,6 @@
 <?php /* Template Name: Bungalows template */ ?>
 
+
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : the_post(); ?>

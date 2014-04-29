@@ -5,9 +5,10 @@
  */
 add_action( 'login_redirect', 'hook_login_redirect_tgt');
 function hook_login_redirect_tgt( $redirect ) {
-	if ($redirect == get_admin_url())
+	if ( $redirect == get_admin_url() )
+	{
 		return 'wp-admin/admin.php?page=my-top-level-handle';
-	
+	}
 	return $redirect;
 }
 
@@ -60,21 +61,52 @@ function hotel_style() {
 
 function hotel_script()
 {
-	
-	if ( isset($_GET['page']) )
+	/* deregister scripts and styles */
+	wp_deregister_script('hotel-jquery' );
+	wp_deregister_script('jquery-ui-datepicker' );
+	wp_deregister_script('jquery-ui-datepicker-hotel' );
+	wp_deregister_script('jquery-ui-calendar' );
+	wp_deregister_script('fullcalendar' );
+	wp_deregister_script('admin-script' );
+
+	wp_deregister_style('humanity-jquery-ui' );
+	wp_deregister_style( 'style-admin' );
+	wp_deregister_style( 'fullcalendar' );
+
+
+	/* register scripts and styles */
+	wp_register_script( 'hotel-jquery', TEMPLATE_URL . '/js/jquery.js', null, '1.5.8' );
+	wp_register_script( 'jquery-ui-datepicker', TEMPLATE_URL . '/js/jquery.ui.datepicker.js', null, '1.0' );
+	wp_register_script( 'jquery-ui-calendar', TEMPLATE_URL . '/js/jquery.ui.calendar.js', null, '1.0' );
+	wp_register_script( 'fullcalendar', TEMPLATE_URL . '/js/fullcalendar.js', null, '1.0' );
+	wp_register_script( 'admin-script', TEMPLATE_URL . '/js/admin.script.js', null, '1.0' );
+
+	wp_register_style( 'humanity-jquery-ui', TEMPLATE_URL . '/css/humanity/jquery-ui.css', false , '1.0.0' );
+	wp_register_style( 'style-admin', TEMPLATE_URL . '/css/style-admin.css' , false , '1.0.0' );
+	wp_register_style( 'fullcalendar', TEMPLATE_URL . '/css/fullcalendar.css' , false , '1.0.0' );
+
+	if ( isset( $_GET['page'] ) )
 	{
-                wp_register_script( 'jquery-ui-datepicker-hotel', TEMPLATE_URL . '/js/jquery.ui.datepicker.js' );
+        wp_register_script( 'jquery-ui-datepicker-hotel', TEMPLATE_URL . '/js/jquery.ui.datepicker.js' );
+
 		wp_enqueue_style( 'fullcalendar');
 		wp_enqueue_style( 'humanity-jquery-ui' );
 		wp_enqueue_style( 'style-admin');
-		if($_GET['page']=="reservations"){
-			wp_enqueue_script('hotel-jquery');
+		// wp_enqueue_style('thickbox');
+
+		if ( $_GET['page'] == "reservations" ) {
+			wp_enqueue_script( 'hotel-jquery' );
 		}
 		//wp_enqueue_script('jquery-ui-datepicker');
 		wp_enqueue_script('jquery-ui-datepicker-hotel');
 		wp_enqueue_script('jquery-ui-calendar');
 		wp_enqueue_script('fullcalendar');
 		wp_enqueue_script('admin-script');
+		wp_enqueue_script('page');
+		wp_enqueue_script('editor');
+		// wp_enqueue_script('thickbox');
+		wp_enqueue_script('media-upload');
+		wp_enqueue_script('word-count');
 	}
 }	
 add_action('admin_enqueue_scripts', 'hotel_script');

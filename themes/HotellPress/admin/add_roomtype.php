@@ -1,72 +1,106 @@
 <?php
-$uploadfile = "/images/roomtype";
-$fullsize = "/images/fullsize";
-$currency = get_option('tgt_currency');
-	if ( $currency == "USD" || $currency == "AUD" || $currency == "CAD" || $currency == "NZD" || $currency == "HKD" || $currency == "SGD" ) { $currencysymbol = "$"; }
-	else if ( $currency == "GBP" ) { $currencysymbol = "&pound;"; }
-	else if ( $currency == "JPY" ) { $currencysymbol = "&yen;"; }
-	else if ( $currency == "EUR" ) { $currencysymbol = "&euro;"; }
-	else { $currencysymbol = ""; }
-if(isset($_GET['action']) && $_GET['action']=="remove")
-	{			
-			$arr_themethumbnails= get_post_meta($_GET['roomtype_id'], 'tgt_roomtype_gallery', true);
-			for($i=0;$i<count($arr_themethumbnails['small']);$i++){			
-		
-				if($arr_themethumbnails['small'][$i] == $_GET['subthumname']){
-					unset($arr_themethumbnails['small'][$i]);							
-				}				
-				if($arr_themethumbnails['full'][$i] == $_GET['subthumname2']){
-					unset($arr_themethumbnails['full'][$i]);
-				}			
-			}
-			$arr_themethumbnails['small'] = array_values($arr_themethumbnails['small']); 
-			//var_dump($arr_themethumbnails['small']);
-			$arr_themethumbnails['full'] = array_values($arr_themethumbnails['full']);
-			//var_dump($arr_themethumbnails['full']);
-			update_post_meta($_GET['roomtype_id'], 'tgt_roomtype_gallery', $arr_themethumbnails);	
-			if(file_exists(TEMPLATEPATH .$_GET['subthumname'])){					
-				unlink(TEMPLATEPATH .$_GET['subthumname']);				
-				}
-			if(file_exists(TEMPLATEPATH .$_GET['subthumname2'])){					
-				unlink(TEMPLATEPATH .$_GET['subthumname2']);				
-				}
-			
-			echo "<script language='javascript'>window.location = '"."admin.php?page=my-submenu-handle-add-room-type&roomtype_id=". $_GET['roomtype_id'] ."';</script>";	
-		
+	$uploadfile = "/images/roomtype";
+	$fullsize = "/images/fullsize";
+
+	$currency = get_option('tgt_currency');
+	$currencysymbol = '';
+	if ( $currency in array( "USD","AUD","CAD","NZD","HKD","SGD" )
+	{ 
+		$currencysymbol = "$"; 
 	}
-if(isset($_POST['submit_go']) && !isset($_GET['roomtype_id'])){
-$errors = array();
-if (isset($_POST['title']) && $_POST['title']=="" ){$errors['title'] = __('Enter room type name, please!','hotel');}
-if (isset($_POST['description']) && $_POST['description']=="" ){$errors['description'] = __('Enter description, please!','hotel');}
-if (isset($_POST['personnumber']) && $_POST['personnumber']=="" ){$errors['personnumber'] = __('Enter person in rooms, please!','hotel');}
-if (isset($_POST['kidsnumber']) && $_POST['kidsnumber'] == "" ){$errors['kidsnumber'] = __('Enter kids in rooms, please!','hotel');}
-if (count($errors)==0){
-$post_id = wp_insert_post( array(						
-		'post_title'	=> $_POST['title'],
-		'post_content'	=> $_POST['description'],
-		'post_type' => 'roomtype',
-		'post_status' => 'publish'
-	) );
-	$mainimage	= $_FILES['mainimage'];	
-	if($mainimage['tmp_name'] != "")
-				{	
-					$image_results = array();
-					$simg = imagecreatefromjpeg($mainimage['tmp_name']);
-					$image_results['small'] = tgt_resize_image($mainimage['tmp_name'],$uploadfile,271,105,$mainimage['type'],$mainimage['name']);	
-					if(imagesx($simg)<850){
-					$image_results['full'] = tgt_resize_image($mainimage['tmp_name'],$fullsize,imagesx($simg),imagesy($simg),$mainimage['type'],$mainimage['name']);
-					}else{
-					$image_results['full'] = tgt_resize_image($mainimage['tmp_name'],$fullsize,850,850*imagesy($simg)/imagesx($simg),$mainimage['type'],$mainimage['name']);
-					}					
-					add_post_meta($post_id, 'tgt_roomtype_thumbnail', $image_results);
-				}				
+	else if ( $currency == "GBP" ) 
+	{ 
+		$currencysymbol = "&pound;"; 
+	}
+	else if ( $currency == "JPY" ) 
+	{ 
+		$currencysymbol = "&yen;"; 
+	}
+	else if ( $currency == "EUR" ) 
+	{ 
+		$currencysymbol = "&euro;"; 
+	}
+
+	if ( isset( $_GET[ 'action' ] ) && $_GET[ 'action' ] == "remove" )
+	{			
+		$arr_themethumbnails = get_post_meta( $_GET['roomtype_id'], 'tgt_roomtype_gallery', true);
+		for($i=0; $i < count( $arr_themethumbnails[ 'small' ] ); $i++)
+		{			
+			if($arr_themethumbnails['small'][$i] == $_GET['subthumname'])
+			{
+				unset($arr_themethumbnails['small'][$i]);							
+			}				
+			if($arr_themethumbnails['full'][$i] == $_GET['subthumname2'])
+			{
+				unset($arr_themethumbnails['full'][$i]);
+			}			
+		}
+		$arr_themethumbnails['small'] = array_values($arr_themethumbnails['small']); 
+		//var_dump($arr_themethumbnails['small']);
+		$arr_themethumbnails['full'] = array_values($arr_themethumbnails['full']);
+		//var_dump($arr_themethumbnails['full']);
+		update_post_meta( $_GET['roomtype_id'], 'tgt_roomtype_gallery', $arr_themethumbnails);	
+
+		if(file_exists(TEMPLATEPATH .$_GET['subthumname']))
+		{					
+			unlink(TEMPLATEPATH .$_GET['subthumname']);				
+		}
+		if(file_exists(TEMPLATEPATH .$_GET['subthumname2']))
+		{	
+			unlink(TEMPLATEPATH .$_GET['subthumname2']);				
+		}
+		
+		echo "<script language='javascript'>window.location = '"."admin.php?page=my-submenu-handle-add-room-type&roomtype_id=". $_GET['roomtype_id'] ."';</script>";	
+	}
+
+	if ( isset($_POST['submit_go']) && !isset($_GET['roomtype_id'] ) )
+	{
+		$errors = array();
+		if ( isset($_POST['title']) && $_POST['title']=="" )
+		{
+			$errors['title'] = __('Enter room type name, please!','hotel');
+		}
+		if (isset($_POST['description']) && $_POST['description']=="" )
+		{
+			$errors['description'] = __('Enter description, please!','hotel');
+		}
+		if (isset($_POST['personnumber']) && $_POST['personnumber']=="" ){$errors['personnumber'] = __('Enter person in rooms, please!','hotel');}
+		if (isset($_POST['kidsnumber']) && $_POST['kidsnumber'] == "" ){$errors['kidsnumber'] = __('Enter kids in rooms, please!','hotel');}
+		if (count($errors)==0){
+			$post_id = wp_insert_post( array(						
+				'post_title'	=> $_POST['title'],
+				'post_content'	=> $_POST['description'],
+				'post_type' => 'roomtype',
+				'post_status' => 'publish'
+			) );
+			$mainimage	= $_FILES['mainimage'];	
+			if($mainimage['tmp_name'] != "")
+			{	
+				$image_results = array();
+				$simg = imagecreatefromjpeg($mainimage['tmp_name']);
+				$image_results['small'] = tgt_resize_image(
+					$mainimage['tmp_name'], $uploadfile, 271, 105, $mainimage['type'], $mainimage['name']
+				);	
+				if(imagesx($simg)<850){
+					$image_results['full'] = tgt_resize_image(
+						$mainimage['tmp_name'], $fullsize, imagesx($simg), imagesy($simg), $mainimage['type'], $mainimage['name'] 
+					);
+				}
+				else
+				{
+					$image_results['full'] = tgt_resize_image(
+						$mainimage['tmp_name'], $fullsize, 850, 850 * imagesy($simg) / imagesx($simg), $mainimage['type'], $mainimage['name']
+					);
+				}					
+				add_post_meta( $post_id, 'tgt_roomtype_thumbnail', $image_results);
+			}				
 			// Upload thumbnails						
 			$themethumbnails = array();			
 			for($i=0; $i < count($_FILES['themethumbnails']['name']); $i++)
 			{
-				if($_FILES['themethumbnails']['name'][$i]!="" && substr($_FILES['themethumbnails']['type'][$i], 0, 6) == "image/")
+				if( $_FILES['themethumbnails']['name'][$i]!="" && substr($_FILES['themethumbnails']['type'][$i], 0, 6) == "image/")
 				{
-					if(file_exists($fullsize . $_FILES['themethumbnails']['name'][$i]))
+					if( file_exists($fullsize . $_FILES['themethumbnails']['name'][$i]) )
 					{
 						$stringF= basename($_FILES['themethumbnails']['name'][$i]);
 						$stringL= "".rand("000001", "999999");
@@ -75,27 +109,43 @@ $post_id = wp_insert_post( array(
 						$temp2= substr($stringF,$length-4,$length);
 						$file_name= $temp1.$stringL.$temp2;
 					}
-					else{
+					else {
 						$file_name= basename($_FILES['themethumbnails']['name'][$i]);
 					}
 					$simg = imagecreatefromjpeg($_FILES['themethumbnails']['tmp_name'][$i]);
 					$themethumbnails['small'][]= tgt_resize_image($_FILES['themethumbnails']['tmp_name'][$i],$uploadfile,100,40,$_FILES['themethumbnails']['type'][$i],$file_name);	
-					if(imagesx($simg)<850){
-					$themethumbnails['full'][]= tgt_resize_image($_FILES['themethumbnails']['tmp_name'][$i],$fullsize,imagesx($simg),imagesy($simg),$_FILES['themethumbnails']['type'][$i],$file_name);	
-					}else{
-					$themethumbnails['full'][]= tgt_resize_image($_FILES['themethumbnails']['tmp_name'][$i],$fullsize,850,850*imagesy($simg)/imagesx($simg),$_FILES['themethumbnails']['type'][$i],$file_name);	
+					if( imagesx($simg) < 850 )
+					{
+						$themethumbnails['full'][]= tgt_resize_image(
+							$_FILES['themethumbnails']['tmp_name'][$i], 
+							$fullsize, 
+							imagesx($simg), 
+							imagesy($simg),
+							$_FILES['themethumbnails']['type'][$i],
+							$file_name
+						);	
+					} 
+					else {
+						$themethumbnails['full'][]= tgt_resize_image(
+							$_FILES['themethumbnails']['tmp_name'][$i],
+							$fullsize,
+							850,
+							850 * imagesy($simg) / imagesx($simg),
+							$_FILES['themethumbnails']['type'][$i],
+							$file_name
+						);	
 					}
 				}
 			}
 			
-			add_post_meta($post_id, 'tgt_roomtype_gallery', $themethumbnails);	
-			add_post_meta($post_id, 'tgt_roomtype_person_number', $_POST['personnumber']);
-			add_post_meta($post_id, 'tgt_roomtype_kids_number', $_POST['kidsnumber']);
-			add_post_meta($post_id, 'tgt_roomtype_bed_name', $_POST['bedname']);
-			add_post_meta($post_id, 'tgt_roomtype_permit_pet', $_POST['permitpet']);
-			add_post_meta($post_id, 'tgt_roomtype_permit_smoking', $_POST['permitsmoking']);
-			add_post_meta($post_id, 'tgt_roomtype_price', intval($_POST['price']));
-			add_post_meta($post_id, 'tgt_roomtype_discount', intval($_POST['discount']));
+			add_post_meta( $post_id, 'tgt_roomtype_gallery', $themethumbnails);	
+			add_post_meta( $post_id, 'tgt_roomtype_person_number', $_POST['personnumber']);
+			add_post_meta( $post_id, 'tgt_roomtype_kids_number', $_POST['kidsnumber']);
+			add_post_meta( $post_id, 'tgt_roomtype_bed_name', $_POST['bedname']);
+			add_post_meta( $post_id, 'tgt_roomtype_permit_pet', $_POST['permitpet']);
+			add_post_meta( $post_id, 'tgt_roomtype_permit_smoking', $_POST['permitsmoking']);
+			add_post_meta( $post_id, 'tgt_roomtype_price', intval($_POST['price']));
+			add_post_meta( $post_id, 'tgt_roomtype_discount', intval($_POST['discount']));
 			$message = "Insert room type {$_POST['title']} successful!";			
 				setcookie("message", $message, time()+3600);			
 				echo "<script language='javascript'>window.location = '"."admin.php?page=my-submenu-handle-list-room-types';</script>";	
@@ -206,13 +256,15 @@ if (count($errors)==0){
 	</div>
 	<br/>
 	<?php
-		 if (isset($errors) && count($errors)>0){
-			echo '<div class="error"><strong>';
-			foreach ($errors as $item){
-				echo "<p>$item</p>";
-			}
-			echo '</strong></div>';
-		} 
+	if ( isset( $errors ) && count( $errors ) > 0 )
+	{
+		echo '<div class="error"><strong>';
+		foreach ( $errors as $item )
+		{
+			echo "<p>$item</p>";
+		}
+		echo '</strong></div>';
+	} 
 	?>
 	<br/>
 	<div class="settings" style="margin: 0px 0px 0px 0px; padding-top: 0px 0px 0px 0px;">
@@ -229,17 +281,26 @@ if (count($errors)==0){
 						<?php
 						global $query_string;		
 						global $post;
-						if (isset($_GET['roomtype_id'])){								
-								query_posts('post_type=roomtype&p='.$_GET['roomtype_id']);							
+						if ( isset( $_GET[ 'roomtype_id' ] ) )
+						{								
+								query_posts( 'post_type=roomtype&p=' . $_GET[ 'roomtype_id' ] );							
 						}						
-						if(have_posts()){ the_post(); }	
-						?>
+						if ( have_posts() ) {
+							the_post();	
+						} ?>
 						<span><?php _e('Image ','hotel');?></span>
 						<div class="inputStyle">
 							<input type="file" style="width:310px" size="40" name="mainimage" id="mainimage" value="" />				
 						</div>
 						<div class="clear"></div>
-						<input type="hidden" name="titlesss" id="titlesss" value="<?php if(have_posts()){ echo $post->post_title;} else { if(isset($_POST['title'])) echo $_POST['title']; } ?>" style="width:300px;"/>	
+						<input type="hidden" name="titlesss" id="titlesss" value="<?php 
+						if( have_posts() ) {
+							echo $post->post_title;
+						}
+						elseif ( isset( $_POST['title'] ) ) {
+							echo $_POST['title']; 
+						} 
+						?>" style="width:300px;"/>
 						<span><?php _e('Room Type Name ','hotel');?>(*):</span>
 						<div class="inputStyle">							
 							<input type="text" name="title" id="title" value="<?php if($_POST['title']){ echo $_POST['title'];} else { if(have_posts()) { echo $post->post_title; } } ?>" style="width:300px;"/>				
@@ -261,20 +322,18 @@ if (count($errors)==0){
 						</style>
 						<?php 
 							if(!empty($_POST['description'])) 
+							{
 								$exist_des = trim($_POST['description']);
+							}
 							elseif (have_posts()) 
+							{
 								$exist_des = $post->post_content;
-								
+							}
+							
 							wp_tiny_mce(false);
-							wp_enqueue_script('page');
-							wp_enqueue_script('editor');
 							do_action('admin_print_scripts');
-							wp_enqueue_style('thickbox');
-							wp_enqueue_script('thickbox');
 							add_thickbox();
 							add_action( 'admin_head', 'wp_tiny_mce' );
-							wp_enqueue_script('media-upload');
-							wp_enqueue_script('word-count');
 							the_editor( $exist_des , 'description', '', false);						
 						?>			
 						

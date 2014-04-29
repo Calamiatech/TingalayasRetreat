@@ -23,7 +23,7 @@ add_action('template_redirect','ajax_hotel');
 function ajax_hotel()
 {
 global $wp_rewrite;
-	if (!empty($_REQUEST['do_ajax']))
+	if ( ( !empty( $_REQUEST['do_ajax'] ) ) && ( isset( $_POST['action'] ) ) )
 	{
 		$action = $_POST['action'];
 		switch ($action)
@@ -540,14 +540,7 @@ $labels = array(
 	//var_dump( $_COOKIE['default_lang'] );
 	
 	/*--------- SCRIPT register ---------*/
-	wp_register_script( 'hotel-jquery'			, TEMPLATE_URL . '/js/jquery.js', null, '1.5.8' );
-	wp_register_script( 'jquery-ui-datepicker', TEMPLATE_URL . '/js/jquery.ui.datepicker.js', null, '1.0' );
-	wp_register_script( 'jquery-ui-calendar'	, TEMPLATE_URL . '/js/jquery.ui.calendar.js', null, '1.0' );
-	wp_register_script( 'fullcalendar'			, TEMPLATE_URL . '/js/fullcalendar.js', null, '1.0' );
-	wp_register_script( 'admin-script'			, TEMPLATE_URL . '/js/admin.script.js', null, '1.0' );
-	wp_register_style( 'humanity-jquery-ui' 	, TEMPLATE_URL . '/css/humanity/jquery-ui.css', false , '1.0.0' );
-	wp_register_style( 'style-admin' 			, TEMPLATE_URL . '/css/style-admin.css' , false , '1.0.0' );
-	wp_register_style( 'fullcalendar' 			, TEMPLATE_URL . '/css/fullcalendar.css' , false , '1.0.0' );
+	
 }
 add_action('init', 'my_custom_init');
 

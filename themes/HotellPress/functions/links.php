@@ -52,7 +52,7 @@ function hook_template_redirect(){
 	{
 		$action = $_GET[ 'action' ];
 	}
-	else
+	else if ( isset( $_GET['action'] ) )
 	{
 		if ( $wp_rewrite->using_permalinks() )
 		{

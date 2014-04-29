@@ -89,7 +89,7 @@ endif;
 
 add_action( 'widgets_init', 'customtheme_widgets_init' );
 
-if ( ! function_exists( 'customtheme_widgets_init' ) ):
+if ( !function_exists( 'customtheme_widgets_init' ) ):
 	
 	function	customtheme_widgets_init() {
 		

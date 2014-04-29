@@ -114,7 +114,7 @@
 	
 					<?php echo ( is_front_page() ? '<h1 class="company-logo">' : '<p class="company-logo">' ); ?>
 	
-					<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="hidden-txt"><?php echo get_bloginfo( 'name' ); ?><?php echo ( $description != '' ? ' - ' . $description : '' ); ?></a>
+					<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="hidden-txt"><?php echo get_bloginfo( 'name' ); ?><?php echo ( get_bloginfo( 'description' ) != '' ? ' - ' . get_bloginfo( 'description' ) : '' ); ?></a>
 	
 					<?php echo ( is_front_page() ? '</h1>' : '</p>' ); ?>
 	
