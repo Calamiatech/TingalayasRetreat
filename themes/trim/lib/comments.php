@@ -4,7 +4,7 @@
  *
  * @link http://getbootstrap.com/components/#media
  */
-class Roots_Walker_Comment extends Walker_Comment {
+class TRim_Walker_Comment extends Walker_Comment {
   function start_lvl(&$output, $depth = 0, $args = array()) {
     $GLOBALS['comment_depth'] = $depth + 1; ?>
     <ul <?php comment_class('media list-unstyled comment-' . get_comment_ID()); ?>>

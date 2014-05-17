@@ -274,8 +274,8 @@ msgstr "Palaa <a href=\"%s\">etusivulle</a>"
 
 #. Text in function
 #: inc/trim-widgets.php:1
-msgid "Roots: vCard"
-msgstr "Roots: vCard"
+msgid "TRim: vCard"
+msgstr "TRim: vCard"
 
 #. Text in echo
 #: searchform.php:3

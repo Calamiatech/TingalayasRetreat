@@ -167,7 +167,7 @@ msgid "Use this widget to add a vCard"
 msgstr "استفاده از این ابزار برای اضافه کردن یک کارت ویزیت."
 
 #: lib/widgets.php:47
-msgid "Roots: vCard"
+msgid "TRim: vCard"
 msgstr "ریشه کارت ویزیت"
 
 #: lib/widgets.php:74

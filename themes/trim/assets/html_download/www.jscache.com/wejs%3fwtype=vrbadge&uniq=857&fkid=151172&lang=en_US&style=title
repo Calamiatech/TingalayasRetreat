@@ -1,0 +1,1 @@
+document.write( '<script src="http://www.tripadvisor.com/WidgetEmbed-vrbadge?fkid=151172&uniq=857&style=title&lang=en_US"></script>' );

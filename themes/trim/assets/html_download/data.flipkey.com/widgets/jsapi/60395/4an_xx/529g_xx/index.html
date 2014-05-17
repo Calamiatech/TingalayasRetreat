@@ -1,0 +1,142 @@
+/**
+ * FlipKey Widgets 2.0 - 5/09
+   
+    To support multiple widgets each widget is inside of it's type in the FlipKey namespace.
+ */ 
+if (typeof FlipKey == "undefined") FlipKey = {};
+
+FlipKey.best_of_property_2012 = {"property_id":"151172","frontdesk_id":"4177","location_id":null,"data_web_root":"http:\/\/data.flipkey.com\/","widget_type":"best_of_property_2012","widget_id":"60395","theme":"2012","error":null,"_k":"_"};
+
+FlipKey.best_of_property_2012.init = function()
+{
+    var fk_widget_type = 'best_of_property_2012';
+    var fk_widget_theme = FlipKey.best_of_property_2012.theme;
+    var fk_iframe = document.createElement('iframe');
+    fk_iframe.id  = "fk_best_of_property_2012_iframe";
+    fk_iframe.frameBorder       = "0";
+    fk_iframe.scrolling         = "0";
+    fk_iframe.allowTransparency = "true";
+
+
+    if(fk_widget_type.search(fk_widget_theme) != -1){
+        fk_widget_type = fk_widget_type.replace('_' + fk_widget_theme, '');
+    }
+
+    FlipKey.best_of_property_2012.widget_embed = document.getElementById('flipkey_best_of_property_2012');
+    var fk_parent = FlipKey.best_of_property_2012.widget_embed.parentNode;
+
+
+
+    //Exit if there is a problem with the embed or a widget of the same type already exists in the page.
+    if (FlipKey.best_of_property_2012.error) 
+    {
+        FlipKey.best_of_property_2012.widget_embed.parentNode.innerHTML = '';
+        return false;
+    }
+
+
+    switch (fk_widget_type)
+    {
+        case 'property_reviews_normal':
+            fk_iframe.src    = FlipKey.best_of_property_2012.data_web_root + "widgets/property_reviews/normal/" + FlipKey.best_of_property_2012._k + "/" + FlipKey.best_of_property_2012.frontdesk_id + "/" + FlipKey.best_of_property_2012.property_id + "/1/1" + FlipKey.best_of_property_2012.theme;
+            fk_iframe.width  = "468";
+            fk_iframe.height = "260";
+            break;
+            
+        case 'property_reviews_skyscraper':
+            fk_iframe.src    = FlipKey.best_of_property_2012.data_web_root + "widgets/property_reviews/skyscraper/" + FlipKey.best_of_property_2012._k + "/" + FlipKey.best_of_property_2012.frontdesk_id + "/" + FlipKey.best_of_property_2012.property_id + "/1/1" + FlipKey.best_of_property_2012.theme;
+            fk_iframe.width  = "240";
+            fk_iframe.height = "480";
+            break;
+            
+        case 'property_badge':
+            fk_iframe.src    = FlipKey.best_of_property_2012.data_web_root + "widgets/property_badge/" + FlipKey.best_of_property_2012._k + "/" + FlipKey.best_of_property_2012.frontdesk_id + "/" + FlipKey.best_of_property_2012.property_id + FlipKey.best_of_property_2012.theme;
+            fk_iframe.width  = "160";
+            fk_iframe.height = "110";
+            break;
+                    
+        case 'frontdesk_badge':
+            fk_iframe.src    = FlipKey.best_of_property_2012.data_web_root + "widgets/frontdesk_badge/" + FlipKey.best_of_property_2012._k + "/" + FlipKey.best_of_property_2012.frontdesk_id  + FlipKey.best_of_property_2012.theme;
+            fk_iframe.width  = "160";
+            fk_iframe.height = "110";
+
+            break;
+        
+        case 'availability':
+            fk_iframe.src    = FlipKey.best_of_property_2012.data_web_root + "widgets/availability/" + FlipKey.best_of_property_2012._k + "/" + FlipKey.best_of_property_2012.frontdesk_id + "/" + FlipKey.best_of_property_2012.property_id + "/ 0" + FlipKey.best_of_property_2012.theme;
+            fk_iframe.width  = "400";
+            fk_iframe.height = "260";
+            break;
+            
+        case 'excellence_badge':
+            fk_iframe.src    = FlipKey.best_of_property_2012.data_web_root + "widgets/excellence_badge/" + FlipKey.best_of_property_2012.frontdesk_id + '/';
+            fk_iframe.width  = "190";
+            fk_iframe.height = "141";
+            break;
+            
+        case 'best_of_property':
+            fk_iframe.src = FlipKey.best_of_property_2012.data_web_root + "widgets/best_of_property/" + FlipKey.best_of_property_2012.frontdesk_id + "/" + FlipKey.best_of_property_2012.property_id + "/" + FlipKey.best_of_property_2012.theme + '/';
+            fk_iframe.width = "190";
+            fk_iframe.height = "150";
+            break;
+            
+        case 'best_of_frontdesk':
+            fk_iframe.src = FlipKey.best_of_property_2012.data_web_root + "widgets/best_of_frontdesk/" + FlipKey.best_of_property_2012.frontdesk_id + "/" + FlipKey.best_of_property_2012.theme + '/';
+            fk_iframe.width = "190";
+            fk_iframe.height = "150";
+            break;
+
+        case 'search_ad':
+            fk_iframe.src = FlipKey.best_of_property_2012.data_web_root + "widgets/search_ad/"+ FlipKey.best_of_property_2012.location_id +"/"+ FlipKey.best_of_property_2012.widget_id + "/" + FlipKey.best_of_property_2012.theme;
+
+            var theme = FlipKey.best_of_property_2012.theme.split('/');
+            width = theme[0];
+            height = theme[1];
+
+            if(width != 250 && width != 300 && width != 336){
+                width = 250;
+            }
+
+            if(height != 250 && height != 280){
+                height = 250;
+            }
+
+            fk_iframe.width = width;
+            fk_iframe.height = height;
+            break;
+
+        case 'white_label':
+
+            var theme = FlipKey.best_of_property_2012.theme.split('/');
+
+            fk_iframe.src = FlipKey.best_of_property_2012.data_web_root + "widgets/white_label/"+ FlipKey.best_of_property_2012.location_id +"/"+ FlipKey.best_of_property_2012.widget_id + "/" + FlipKey.best_of_property_2012.theme;
+            fk_iframe.width = theme[0];
+            fk_iframe.height = theme[1];
+            break;
+    }
+
+    fk_parent.innerHTML = '';
+    fk_parent.appendChild(fk_iframe);
+    fk_parent.appendChild(FlipKey.best_of_property_2012.widget_embed);
+    //fk_parent.insertBefore(fk_iframe,FlipKey.best_of_property_2012.widget_embed);
+    FlipKey.best_of_property_2012.widget_embed.style.display = "block";
+    FlipKey.best_of_property_2012.widget_embed.style.fontSize = "10px";
+
+};
+
+
+function addLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != 'function') {
+    window.onload = func;
+  } else {
+    window.onload = function() {
+      if (oldonload) {
+        oldonload();
+      }
+      func();
+    }
+  }
+}
+
+addLoadEvent(FlipKey.best_of_property_2012.init);

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: Roots WordPress theme translations 1.0\n"
+"Project-Id-Version: TRim WordPress theme translations 1.0\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: Harald Ringvold <harald.ringvold@gmail.com>\n"
@@ -382,8 +382,8 @@ msgstr "Tilbake til <a href=\"%s\">forsida</a>"
 
 #. Text in function
 #: inc/trim-widgets.php:1
-msgid "Roots: vCard"
-msgstr "Roots: vCard"
+msgid "TRim: vCard"
+msgstr "TRim: vCard"
 
 #. Text in echo
 #: searchform.php:3

@@ -1,8 +1,8 @@
-# [Roots Theme](http://trim.io/)
+# [TRim Theme](http://trim.io/)
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
-Roots is a WordPress starter theme based on [HTML5 Boilerplate](http://html5boilerplate.com/) & [Bootstrap](http://getbootstrap.com/) that will help you make better themes.
+TRim is a WordPress starter theme based on [HTML5 Boilerplate](http://html5boilerplate.com/) & [Bootstrap](http://getbootstrap.com/) that will help you make better themes.
 
 * Source: [https://github.com/trim/trim](https://github.com/trim/trim)
 * Home Page: [http://trim.io/](http://trim.io/)
@@ -12,13 +12,13 @@ Roots is a WordPress starter theme based on [HTML5 Boilerplate](http://html5boil
 
 ## Installation
 
-Clone the git repo - `git clone git://github.com/trim/trim.git` - or [download it](https://github.com/trim/trim/zipball/master) and then rename the directory to the name of your theme or website. [Install Grunt](http://gruntjs.com/getting-started), and then install the dependencies for Roots contained in `package.json` by running the following from the Roots theme directory:
+Clone the git repo - `git clone git://github.com/trim/trim.git` - or [download it](https://github.com/trim/trim/zipball/master) and then rename the directory to the name of your theme or website. [Install Grunt](http://gruntjs.com/getting-started), and then install the dependencies for TRim contained in `package.json` by running the following from the TRim theme directory:
 
 ```
 npm install
 ```
 
-Reference the [theme activation](http://trim.io/trim-101/#theme-activation) documentation to understand everything that happens once you activate Roots.
+Reference the [theme activation](http://trim.io/trim-101/#theme-activation) documentation to understand everything that happens once you activate TRim.
 
 ## Theme Development
 
@@ -32,12 +32,12 @@ Edit `lib/init.php` to setup custom navigation menus and post thumbnail sizes.
 
 ## Documentation
 
-### [Roots Docs](http://trim.io/docs/)
+### [TRim Docs](http://trim.io/docs/)
 
-* [Roots 101](http://trim.io/trim-101/) — A guide to installing Roots, the files and theme organization
+* [TRim 101](http://trim.io/trim-101/) — A guide to installing TRim, the files and theme organization
 * [Theme Wrapper](http://trim.io/an-introduction-to-the-trim-theme-wrapper/) — Learn all about the theme wrapper
-* [Build Script](http://trim.io/using-grunt-for-wordpress-theme-development/) — A look into the Roots build script powered by Grunt
-* [Roots Sidebar](http://trim.io/the-trim-sidebar/) — Understand how to display or hide the sidebar in Roots
+* [Build Script](http://trim.io/using-grunt-for-wordpress-theme-development/) — A look into the TRim build script powered by Grunt
+* [TRim Sidebar](http://trim.io/the-trim-sidebar/) — Understand how to display or hide the sidebar in TRim
 
 ## Features
 
@@ -68,4 +68,4 @@ Everyone is welcome to help [contribute](CONTRIBUTING.md) and improve this proje
 
 ## Support
 
-Use the [Roots Discourse](http://discourse.trim.io/) to ask questions and get support.
+Use the [TRim Discourse](http://discourse.trim.io/) to ask questions and get support.

@@ -23,14 +23,14 @@ function trim_widgets_init() {
   ));
 
   // Widgets
-  register_widget('Roots_Vcard_Widget');
+  register_widget('TRim_Vcard_Widget');
 }
 add_action('widgets_init', 'trim_widgets_init');
 
 /**
  * Example vCard widget
  */
-class Roots_Vcard_Widget extends WP_Widget {
+class TRim_Vcard_Widget extends WP_Widget {
   private $fields = array(
     'title'          => 'Title (optional)',
     'street_address' => 'Street Address',
@@ -44,7 +44,7 @@ class Roots_Vcard_Widget extends WP_Widget {
   function __construct() {
     $widget_ops = array('classname' => 'widget_trim_vcard', 'description' => __('Use this widget to add a vCard', 'trim'));
 
-    $this->WP_Widget('widget_trim_vcard', __('Roots: vCard', 'trim'), $widget_ops);
+    $this->WP_Widget('widget_trim_vcard', __('TRim: vCard', 'trim'), $widget_ops);
     $this->alt_option_name = 'widget_trim_vcard';
 
     add_action('save_post', array(&$this, 'flush_widget_cache'));

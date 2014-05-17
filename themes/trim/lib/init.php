@@ -1,6 +1,6 @@
 <?php
 /**
- * Roots initial setup and constants
+ * TRim initial setup and constants
  */
 function trim_setup() {
   // Make theme available for translation

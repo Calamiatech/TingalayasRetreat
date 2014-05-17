@@ -107,7 +107,7 @@
 * Change roots_sidebar into a more explicit configuration array
 * Re-organize configuration/setup files
 * Update to jQuery 1.8.2
-* Refactor/simplify Roots vCard Widget
+* Refactor/simplify TRim vCard Widget
 * Move custom entry_meta code into template
 * Move Google Analytics code into footer template
 * Add CONTRIBUTING.md to assist with the new GitHub UI
@@ -132,7 +132,7 @@
 ### 5.2.0: August 18th, 2012
 * Update to jQuery 1.8.0 and Modernizr 2.6.1
 * Fix duplicate active class in `wp_nav_menu` items
-* Merge `Roots_Navbar_Nav_Walker` into `Roots_Nav_Walker`
+* Merge `TRim_Navbar_Nav_Walker` into `TRim_Nav_Walker`
 * Add and update code documentation
 * Use `wp_get_theme()` to get the theme name on activation
 * Use `<figure>` & `<figcaption>` for captions
@@ -175,8 +175,8 @@
 * Update to Bootstrap 2.0
 * Remove `roots-options.php` and replaced with a more simple `roots-config.php`
 * Now using Bootstrap markup on forms, page titles, image galleries, alerts and errors, post and comment navigation
-* Remove Roots styles from `style.css` and introduced `app.css` for site-specific CSS
-* Remove almost all previous default Roots styling
+* Remove TRim styles from `style.css` and introduced `app.css` for site-specific CSS
+* Remove almost all previous default TRim styling
 * Latest updates from HTML5 Boilerplate
 
 ### 4.1.0: February 1st, 2012
@@ -188,7 +188,7 @@
 * Allow `<script>` tags in TinyMCE
 * Add full width class and search form to 404 template
 * Remove Blueprint CSS specific markup
-* Use Roots Nav Walker as default
+* Use TRim Nav Walker as default
 * Add author name and taxonomy name to archive template title
 * Add Full Width CSS class options
 
@@ -273,7 +273,7 @@
 * Allow the theme directory and name to be renamable
 
 ### 3.0.0: March 28th, 2011
-* Change name from BB to Roots and release to the public
+* Change name from BB to TRim and release to the public
 * Update various areas to match the latest changes to HTML5 Boilerplate
 * Change the theme markup based on hCard/Readability Guidelines and work by Jonathan Neal
 * Create the navigation menus and automatically set their locations during theme activation

@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"WP_DE",
+				"WP_DEBUG_DISPLAY"
+			],
+			[
+				"wp_dere",
+				"wp_deregister_style"
+			],
+			[
+				"humanity",
+				"humanity-jquery-ui"
+			],
+			[
+				"currency",
+				"currencysymbol"
+			],
+			[
+				"reservation",
+				"reservation_form"
+			],
+			[
 				"cloud",
 				"cloud_template"
 			]
@@ -11,103 +31,24 @@
 	},
 	"buffers":
 	[
-		{
-			"contents": "<?php /* Template Name: Bungalows template */ ?>\n\n\n<?php get_header(); ?>\n\n<?php if ( have_posts() ) : the_post(); ?>\n\n\n<div id=\"content\">\n\n\n	<div id=\"main-content\">\n	\n	\n		<div class=\"page-content default-styles\">\n		\n			\n			<?php the_content(); ?>\n			\n			\n			<br class=\"clear-fix\" />\n			\n		\n		</div><!-- .page-content -->\n\n		\n		<br class=\"clear-fix\" />\n	\n\n		<?php $bungalows = $wpdb->get_results( 'SELECT * FROM ' . $wpdb->posts . ' WHERE post_parent = ' . get_the_ID() . ' AND post_type = \"page\" ORDER BY menu_order', 'OBJECT' ); ?>\n		\n		<?php if ( $bungalows ) : ?>\n		\n			<div id=\"bungalows-wrapper\">\n\n				<ul id=\"bungalows-nav\">\n				\n					<?php foreach ( $bungalows as $bungalow ) : ?>\n					\n					<li><a href=\"<?php echo get_permalink( $bungalow->ID ); ?>\"><?php echo $bungalow->post_title; ?></a></li>\n					\n					<?php endforeach; ?>\n					\n				</ul>\n				\n				<div class=\"bungalow-content\">\n				\n					<div id=\"bungalow-ajax\">&nbsp;</div>\n					<!-- #bungalow-ajax -->\n					\n					<span id=\"loading\">loading...</span>\n						\n				</div><!-- .bungalow-content -->\n			\n			</div><!-- #bungalows-wrapper -->\n			\n		<?php endif; ?>\n\n\n		<script type=\"text/javascript\" src=\"<?php echo get_bloginfo( 'template_url' ); ?>/js/jquery.featureCarousel.min.js\"></script>\n\n		<script type=\"text/javascript\" src=\"<?php echo bloginfo( 'template_url' ); ?>/fancybox/jquery.mousewheel-3.0.4.pack.js\"></script>\n		\n		<script type=\"text/javascript\" src=\"<?php echo bloginfo( 'template_url' ); ?>/fancybox/jquery.fancybox-1.3.4.pack.js\"></script>\n\n		<script type=\"text/javascript\">\n		\n			//<![CDATA[\n			\n			jQuery( document ).ready( function () {\n										   \n				jQuery( '#bungalows-nav a' ).click( function () {\n					var bungalow	= jQuery( this ).parent( 'li' );\n					//jQuery( 'html' ).animate( { scrollTop : 0 }, 'slow' );\n					jQuery( '#loading' ).show();\n					jQuery( '#bungalow-ajax' ).fadeOut();\n					jQuery.get( bungalow.find( 'a' ).attr( 'href' ), '&content=1', function ( data ) {\n						jQuery( '#bungalows-nav .active' ).removeClass( 'active' );\n						bungalow.addClass( 'active' );\n						jQuery( '#bungalow-ajax' ).html( data );\n						jQuery( '#bungalow-ajax' ).fadeIn();\n						jQuery( '#loading' ).hide();\n					} );\n					return false;\n				} );\n				\n				var bungalow	= jQuery( '#bungalows-nav li:first' );\n				jQuery( '#loading' ).show();\n				jQuery( '#bungalow-ajax' ).fadeOut();\n				jQuery.get( bungalow.find( 'a' ).attr( 'href' ), '&content=1', function ( data ) {\n					bungalow.addClass( 'active' );\n					jQuery( '#bungalow-ajax' ).html( data );\n					jQuery( '#bungalow-ajax' ).fadeIn();\n					jQuery( '#loading' ).hide();\n				} );\n			\n			} );\n			\n			//]]>\n		\n		</script>\n\n	\n		<span class=\"deco-shadow\">&nbsp;</span>\n	\n\n	</div><!-- #main-content -->\n\n\n	<?php require( TEMPLATEPATH . '/modules/social-networks.php' ); ?>\n\n\n</div><!-- #content -->\n\n\n<?php endif; ?>\n\n<?php get_footer(); ?>",
-			"file": "themes/tingalayas-theme/page-bungalows.php",
-			"file_size": 2993,
-			"file_write_time": 130294698314783591,
-			"settings":
-			{
-				"buffer_size": 2878,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "themes/HotellPress/functions.php",
-			"settings":
-			{
-				"buffer_size": 4869,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "themes/HotellPress/page-reservations.php",
-			"settings":
-			{
-				"buffer_size": 10511,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "themes/HotellPress/page-bungalows_copy.php",
-			"settings":
-			{
-				"buffer_size": 2707,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "themes/HotellPress/page-bungalows.php",
-			"settings":
-			{
-				"buffer_size": 3904,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "themes/HotellPress/modules/book-online.php",
-			"settings":
-			{
-				"buffer_size": 4026,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "themes/HotellPress/css/custom-theme/jquery-ui-1.8.21.custom.css",
-			"settings":
-			{
-				"buffer_size": 21558,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "themes/HotellPress/header-custom.php",
-			"settings":
-			{
-				"buffer_size": 4431,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Windows/System32/Drivers/etc/hosts",
-			"settings":
-			{
-				"buffer_size": 872,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/metagrapher/Dropbox/Metagrapher LLC/Web/Orange32/OkayPlayer/MAGNA OPERA GROUP   Great Works.htm",
-			"settings":
-			{
-				"buffer_size": 12144,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/SASS Build/SASS - Compressed.sublime-build",
 	"command_palette":
 	{
-		"height": 311.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
-				"Package Control: ",
-				"Package Control: Install Package"
-			],
-			[
 				":w",
 				":w - Save"
+			],
+			[
+				"tidy",
+				"Tidy HTML"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
 			],
 			[
 				":q",
@@ -122,7 +63,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 512.0
+		"width": 464.0
 	},
 	"console":
 	{
@@ -139,8 +80,92 @@
 	},
 	"file_history":
 	[
-		"/C/Windows/System32/Drivers/etc/hosts",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lib/config.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lib/init.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lib/nav.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lib/sidebar.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lib/widgets.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lib/wrapper.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/README.md",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/style.css",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/templates/comments.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/screenshot.png",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/assets/css/main.min.css",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/assets/js/_main.js",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/assets/less/app.less",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/CHANGELOG.md",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/CONTRIBUTING.md",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/functions.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/ar.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/bg_BG.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/ca.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/da_DK.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/de_DE.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/el.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/es_ES.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/et.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/fa_IR.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/fi_FI.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/fr_FR.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/he_IL.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/hu_HU.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/id_ID.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/it_IT.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/ja.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/ko_KR.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/mk_MK.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/ms_MY.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/nb_NO.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/nl_NL.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/nn_NO.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/pl_PL.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/pt_BR.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/ro_RO.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/roots.pot",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/ru_RU.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/sk_SK.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/sr_RS.pot",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/sv_SE.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/tr_TR.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/vi_VN.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/zh_CN.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lang/zh_TW.po",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lib/comments.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/object-cache.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/HotellPress/functions.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/HotellPress/admin/add_roomtype.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/HotellPress/functions/mywidget.php",
+		"/C/Users/metagrapher/AppData/Local/Temp/scp24190/wp-config.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/HotellPress/admin/functions-sub.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/404.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/base.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/Gruntfile.js",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/index.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lib/activation.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lib/cleanup.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lib/gallery.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lib/relative-urls.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lib/scripts.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/lib/titles.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/package.json",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/templates/comment.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/templates/content-single.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/templates/entry-meta.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/templates/page-header.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/trim/templates/searchform.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/HotellPress/page-reservations.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/plugins/magic-fields/RCCWP_Menu.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/HotellPress/functions/links.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/HotellPress/styles/layout.css",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/HotellPress/header-custom.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/HotellPress/css/custom-theme/jquery-ui-1.8.21.custom.css",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/HotellPress/modules/book-online.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/HotellPress/page-bungalows.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/HotellPress/page-bungalows_copy.php",
+		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/tingalayas-theme/page-bungalows.php",
 		"/C/Users/metagrapher/Dropbox/Metagrapher LLC/Web/Orange32/OkayPlayer/MAGNA OPERA GROUP   Great Works.htm",
+		"/C/Windows/System32/Drivers/etc/hosts",
+		"/C/Users/metagrapher/AppData/Roaming/Sublime Text 2/Packages/HtmlTidy/HtmlTidy.sublime-settings",
 		"/C/Users/metagrapher/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/metagrapher/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/C/Users/metagrapher/Documents/GitHub/TingalayasRetreat/themes/tingalayas-theme/page-reservations.php",
@@ -185,17 +210,32 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
+			"C:\\Users\\metagrapher\\Documents\\GitHub\\TingalayasRetreat\\themes\\trim",
+			"C:\\Users\\metagrapher\\Documents\\GitHub\\TingalayasRetreat\\themes\\HotellPress",
 			"C:\\Users\\metagrapher\\GitHub\\MetaWorld"
 		]
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"Roots",
+			"roots",
+			"register",
+			"register_script",
+			"enqueue",
+			"scripts",
+			"enqueue",
+			"add_post_meta\\(\\$",
+			"add_room_type",
+			"add_roomtype",
+			"enqueue",
+			"description",
+			"table-box",
 			"bungalows",
 			"/home/tingalay/public_html",
 			"bones_",
@@ -209,9 +249,12 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
+			"TRim",
+			"trim",
+			"add_post_meta( $",
 			"",
 			"meta_",
 			"metagrapher",
@@ -230,284 +273,14 @@
 	"groups":
 	[
 		{
-			"selected": 9,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "themes/tingalayas-theme/page-bungalows.php",
-					"settings":
-					{
-						"buffer_size": 2878,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								574,
-								574
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "themes/HotellPress/functions.php",
-					"settings":
-					{
-						"buffer_size": 4869,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4868,
-								4868
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 390.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "themes/HotellPress/page-reservations.php",
-					"settings":
-					{
-						"buffer_size": 10511,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5483,
-								5483
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "themes/HotellPress/page-bungalows_copy.php",
-					"settings":
-					{
-						"buffer_size": 2707,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								348,
-								57
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "themes/HotellPress/page-bungalows.php",
-					"settings":
-					{
-						"buffer_size": 3904,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								343,
-								343
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "themes/HotellPress/modules/book-online.php",
-					"settings":
-					{
-						"buffer_size": 4026,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1064,
-								1064
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 168.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "themes/HotellPress/css/custom-theme/jquery-ui-1.8.21.custom.css",
-					"settings":
-					{
-						"buffer_size": 21558,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								988,
-								988
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "themes/HotellPress/header-custom.php",
-					"settings":
-					{
-						"buffer_size": 4431,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1697,
-								1697
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 78.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/C/Windows/System32/Drivers/etc/hosts",
-					"settings":
-					{
-						"buffer_size": 872,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								818,
-								804
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/C/Users/metagrapher/Dropbox/Metagrapher LLC/Web/Orange32/OkayPlayer/MAGNA OPERA GROUP   Great Works.htm",
-					"settings":
-					{
-						"buffer_size": 12144,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8180,
-								8183
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2184.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -539,6 +312,10 @@
 	"output.exec":
 	{
 		"height": 74.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
 	},
 	"replace":
 	{

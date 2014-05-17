@@ -6,11 +6,11 @@
  *   <li id="menu-item-8" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8"><a href="/">Home</a></li>
  *   <li id="menu-item-9" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9"><a href="/sample-page/">Sample Page</a></l
  *
- * Roots_Nav_Walker example output:
+ * TRim_Nav_Walker example output:
  *   <li class="menu-home"><a href="/">Home</a></li>
  *   <li class="menu-sample-page"><a href="/sample-page/">Sample Page</a></li>
  */
-class Roots_Nav_Walker extends Walker_Nav_Menu {
+class TRim_Nav_Walker extends Walker_Nav_Menu {
   function check_current($classes) {
     return preg_match('/(current[-_])|active|dropdown/', $classes);
   }
@@ -71,7 +71,7 @@ add_filter('nav_menu_item_id', '__return_null');
  * Clean up wp_nav_menu_args
  *
  * Remove the container
- * Use Roots_Nav_Walker() by default
+ * Use TRim_Nav_Walker() by default
  */
 function trim_nav_menu_args($args = '') {
   $trim_nav_menu_args['container'] = false;
@@ -85,7 +85,7 @@ function trim_nav_menu_args($args = '') {
   }
 
   if (!$args['walker']) {
-    $trim_nav_menu_args['walker'] = new Roots_Nav_Walker();
+    $trim_nav_menu_args['walker'] = new TRim_Nav_Walker();
   }
 
   return array_merge($args, $trim_nav_menu_args);

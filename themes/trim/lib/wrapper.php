@@ -6,14 +6,14 @@
  * @link http://scribu.net/wordpress/theme-wrappers.html
  */
 function trim_template_path() {
-  return Roots_Wrapping::$main_template;
+  return TRim_Wrapping::$main_template;
 }
 
 function trim_sidebar_path() {
-  return new Roots_Wrapping('templates/sidebar.php');
+  return new TRim_Wrapping('templates/sidebar.php');
 }
 
-class Roots_Wrapping {
+class TRim_Wrapping {
   // Stores the full path to the main template file
   static $main_template;
 
@@ -43,7 +43,7 @@ class Roots_Wrapping {
       self::$base = false;
     }
 
-    return new Roots_Wrapping();
+    return new TRim_Wrapping();
   }
 }
-add_filter('template_include', array('Roots_Wrapping', 'wrap'), 99);
+add_filter('template_include', array('TRim_Wrapping', 'wrap'), 99);

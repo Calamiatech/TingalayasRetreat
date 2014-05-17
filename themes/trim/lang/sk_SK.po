@@ -164,7 +164,7 @@ msgid "Use this widget to add a vCard"
 msgstr "Použiť widget pre pridanie vCard"
 
 #: lib/widgets.php:47
-msgid "Roots: vCard"
+msgid "TRim: vCard"
 msgstr "Koreň: vCard"
 
 #: lib/widgets.php:74

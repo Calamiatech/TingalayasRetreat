@@ -382,7 +382,7 @@ msgstr "Torna a la <a href=\"%s\">pàgina d'inici</a>"
 
 #. Text in function
 #: inc/trim-widgets.php:1
-msgid "Roots: vCard"
+msgid "TRim: vCard"
 msgstr ""
 
 #. Text in echo
